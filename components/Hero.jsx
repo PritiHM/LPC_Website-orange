@@ -77,7 +77,7 @@ export default function Hero() {
         <div className="relative z-20 text-center px-6 max-w-5xl">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <span className="inline-block px-4 py-1.5 mb-6 text-xs md:text-sm font-semibold tracking-widest text-orange-400 uppercase border border-orange-500/30 rounded-full bg-orange-500/10 backdrop-blur-md">
-              Elite Facility Management
+              LPC Facility Management
             </span>
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-white mb-6 leading-[1.1]">
               We Don’t Just Control Pests <br />
