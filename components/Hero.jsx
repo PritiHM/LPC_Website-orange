@@ -15,7 +15,7 @@ import {
   CheckCircle2 
 } from "lucide-react";
 
-export default function PremiumHomePage() {
+export default function Hero() {
   // --- Responsive Orbit Radius Logic ---
   const [radius, setRadius] = useState(300);
 
@@ -157,8 +157,7 @@ export default function PremiumHomePage() {
               transition={{ duration: 4, repeat: Infinity }}
               className="relative z-30 w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-full bg-gradient-to-br from-orange-400 via-orange-500 to-orange-700 flex flex-col items-center justify-center text-white ring-8 ring-white/70 shadow-2xl"
             >
-              <Shield size={window.innerWidth < 640 ? 32 : 52} className="mb-2" />
-              <span className="font-black text-sm sm:text-xl md:text-2xl uppercase tracking-tighter text-center leading-none">
+              <Shield size={32} />              <span className="font-black text-sm sm:text-xl md:text-2xl uppercase tracking-tighter text-center leading-none">
                 Pest<br />Control
               </span>
             </motion.div>
@@ -176,7 +175,7 @@ export default function PremiumHomePage() {
                     <motion.div animate={{ rotate: -360 }} transition={{ duration: 60, repeat: Infinity, ease: "linear" }} className="relative group/planet">
                       <div className="bg-white hover:bg-orange-500 text-slate-800 w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 rounded-full shadow-[0_15px_35px_rgba(249,115,22,0.1)] border-2 border-orange-50 flex flex-col items-center justify-center transition-all duration-300 group-hover/planet:scale-110 group-hover/planet:shadow-orange-400/50">
                         <div className="mb-1 text-orange-500 group-hover/planet:text-white transition-colors">
-                          {React.cloneElement(pest.icon, { size: window.innerWidth < 640 ? 20 : 32 })}
+                          {React.cloneElement(pest.icon, { size: 24 })}
                         </div>
                         <span className="text-[8px] sm:text-[10px] md:text-xs font-black uppercase tracking-widest text-center px-1 group-hover/planet:text-white transition-colors">
                           {pest.name}
