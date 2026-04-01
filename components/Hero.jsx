@@ -108,7 +108,7 @@ const Hero = () => {
   const t = testimonials[index];
 
   return (
-    <div className="bg-blue-950/40 backdrop-blur-sm backdrop-saturate-150 text-white selection:bg-orange-500/30 overflow-x-hidden">
+    <div className="  text-white  overflow-x-hidden">
       {/* --- BACKGROUND ELEMENTS --- */}
       <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-blue-600/20 rounded-full blur-[80px] md:blur-[120px] animate-pulse" />
@@ -116,8 +116,7 @@ const Hero = () => {
       </div>
 
       <div className="relative z-10">
-        <section className="relative min-h-[800px] md:h-[900px] flex items-center overflow-hidden py-20 md:py-0">
-          {/* Background Image */}
+<section className="relative min-h-screen flex items-center overflow-hidden">          {/* Background Image */}
           <div className="absolute inset-0 -z-10">
             <img
               src="/images/herobg.png"
@@ -135,8 +134,7 @@ const Hero = () => {
 
           {/* Content */}
           <div className="container mx-auto px-6 md:px-12">
-            <div className="max-w-2xl p-6 md:p-12 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl text-white mb-20 md:mb-32">
-              <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
+<div className="max-w-2xl p-5 md:p-8 mt-10 md:mt-0 mb-10 md:mb-16 rounded-2xl  bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl text-white">              <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
                 We Don’t Just Control Pests <br className="hidden md:block" /> We Eliminate Them
               </h1>
               <p className="text-base md:text-lg text-blue-100 mb-8">
@@ -149,15 +147,15 @@ const Hero = () => {
           </div>
 
           {/* 🔥 GLASS STRIP */}
-          <div className="absolute bottom-0 left-0 w-full z-20">
-            <div className="
-              w-full grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6
-              bg-gradient-to-r from-white/10 via-white/5 to-white/10
-              backdrop-blur-xl border-t border-white/10
-              rounded-none md:rounded-t-2xl
-              shadow-lg shadow-blue-900/20
-              px-4 md:px-6 py-6 md:py-8 text-center
-            ">
+         <div className="absolute bottom-0 left-0 w-full z-20">
+  <div className="
+    w-full grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6
+    bg-gradient-to-r from-white/10 via-white/5 to-white/10
+    backdrop-blur-xl border-t border-white/10
+    rounded-none md:rounded-t-2xl
+    shadow-lg shadow-blue-900/20
+    px-4 md:px-4 py-3 md:py-4 text-center
+  ">
               <div>
                 <h3 className="text-xl md:text-2xl font-bold">5+</h3>
                 <p className="text-xs md:text-sm text-blue-100">Years Experience</p>
@@ -179,7 +177,7 @@ const Hero = () => {
         </section>
 
         {/* SERVICES SECTION */}
-        <section className="relative py-16 md:py-24 px-4 md:px-12 lg:px-20">
+        <section className="relative bg-[#F3BE7A] py-16 md:py-24 px-4 md:px-12 lg:px-20">
           <div className="absolute inset-0 -z-10">
             <img
               src="/images/bg-service.jpg"
@@ -238,15 +236,15 @@ const Hero = () => {
         </section>
 
         {/* 3. LPC ECOSYSTEM */}
-        <section className="py-20 md:py-32 relative overflow-hidden bg-[#04041C]">
+        <section className="py-20 md:py-32 relative overflow-hidden bg-[#492403]">
           <div
-            className="absolute inset-0 z-0 opacity-40 pointer-events-none"
-            style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 560'%3E%3Crect width='1440' height='560' fill='transparent'/%3E%3Cg fill='none'%3E%3Ccircle cx='662' cy='506' r='6' fill='%23ff4d4d' opacity='0.7'/%3E%3Ccircle cx='1288' cy='147' r='5' fill='%23a3ff12' opacity='0.6'/%3E%3Ccircle cx='289' cy='68' r='4' fill='white' opacity='0.6'/%3E%3Ccircle cx='148' cy='361' r='5' fill='%23ccccff' opacity='0.5'/%3E%3Ccircle cx='1328' cy='92' r='5' fill='%234dabff' opacity='0.6'/%3E%3Ccircle cx='626' cy='302' r='5' fill='%23ccccff' opacity='0.6'/%3E%3Ccircle cx='54' cy='44' r='5' fill='white' opacity='0.5'/%3E%3Ccircle cx='906' cy='138' r='4' fill='%234dabff' opacity='0.5'/%3E%3Ccircle cx='501' cy='510' r='5' fill='%23a3ff12' opacity='0.5'/%3E%3Ccircle cx='552' cy='348' r='5' fill='white' opacity='0.5'/%3E%3Ccircle cx='528' cy='221' r='5' fill='%23a3ff12' opacity='0.5'/%3E%3Ccircle cx='674' cy='285' r='5' fill='%23ccccff' opacity='0.6'/%3E%3Ccircle cx='1091' cy='336' r='4' fill='white' opacity='0.6'/%3E%3Ccircle cx='402' cy='271' r='4' fill='%23ccccff' opacity='0.4'/%3E%3Ccircle cx='849' cy='488' r='5' fill='white' opacity='0.6'/%3E%3Ccircle cx='757' cy='426' r='4' fill='%23ff4d4d' opacity='0.6'/%3E%3Ccircle cx='817' cy='472' r='3' fill='white' opacity='0.4'/%3E%3Ccircle cx='998' cy='208' r='6' fill='%23a3ff12' opacity='0.6'/%3E%3Ccircle cx='730' cy='307' r='4' fill='%23ccccff' opacity='0.6'/%3E%3Ccircle cx='117' cy='268' r='5' fill='%234dabff' opacity='0.5'/%3E%3Ccircle cx='363' cy='311' r='5' fill='%234dabff' opacity='0.6'/%3E%3Ccircle cx='1001' cy='257' r='5' fill='%234dabff' opacity='0.6'/%3E%3Ccircle cx='1378' cy='163' r='5' fill='%23a3ff12' opacity='0.5'/%3E%3Ccircle cx='724' cy='381' r='4' fill='white' opacity='0.6'/%3E%3Ccircle cx='621' cy='492' r='5' fill='white' opacity='0.6'/%3E%3C/g%3E%3C/svg%3E")`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          />
+  className="absolute inset-0 z-0 opacity-40 pointer-events-none"
+  style={{
+    backgroundImage: "url('/images/download.jpg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+/>
           
           <div className="relative z-10 container mx-auto px-6 text-center mb-10 md:mb-20">
             <h2 className="text-3xl md:text-6xl font-black mb-4 italic text-white uppercase">
@@ -260,8 +258,8 @@ const Hero = () => {
           <div className="relative z-10 flex justify-center items-center h-[500px] md:h-[750px]">
             {/* Scale Wrapper for Mobile Orbit */}
             <div className="relative flex justify-center items-center scale-[0.55] sm:scale-[0.8] md:scale-100 transition-transform duration-500">
-                <div className="absolute w-[400px] h-[400px] border border-white/10 rounded-full" />
-                <div className="absolute w-[700px] h-[700px] border border-white/20 rounded-full shadow-[0_0_60px_rgba(59,130,246,0.2)]" />
+                <div className="absolute w-[400px] h-[400px] border border-white rounded-full" />
+                <div className="absolute w-[700px] h-[700px] border border-white rounded-full shadow-[0_0_60px_rgba(59,130,246,0.2)]" />
 
                 <motion.div
                 animate={{
@@ -316,7 +314,7 @@ const Hero = () => {
         </section>
 
         {/* LOGO MARQUEE */}
-        <section className="py-12 md:py-20 bg-blue-950/40 backdrop-blur-md border-y border-white/10 overflow-hidden">
+        <section className="py-12 md:py-20 bg-[#f5d4aa] overflow-hidden">
           <div className="relative w-full overflow-hidden">
             <div className="flex w-max animate-marquee gap-10 md:gap-20 items-center">
               {[...logos, ...logos].map((logo, i) => (
@@ -332,41 +330,59 @@ const Hero = () => {
         </section>
 
         {/* TESTIMONIALS */}
-        <section className="w-full py-20 md:py-32 bg-gradient-to-br from-blue-950/60 via-blue-900/40 to-blue-950/60 backdrop-blur-sm text-center px-6">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Trusted by Industry Leaders</h2>
-          <div className="w-20 h-1 bg-orange-500 mx-auto rounded-full mb-12 md:mb-16" />
+        <section className="w-full py-8 md:py-15  text-center bg-[#bc8032] px-6">
+  <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+    Trusted by Industry Leaders
+  </h2>
+  <div className="w-20 h-1 bg-orange-500 mx-auto rounded-full mb-12 md:mb-16" />
 
-          <div className="flex justify-center">
-            <div className="max-w-4xl w-full text-center">
-              {/* ⭐ Stars */}
-              <div className="flex justify-center gap-2 text-orange-500 mb-6 md:mb-8">
-                {[...Array(5)].map((_, s) => (
-                  <Star key={s} size={20} fill="currentColor" />
-                ))}
+  <div className="flex justify-center">
+    <div className="max-w-4xl w-full text-center">
+
+      {/* ⭐ Stars */}
+      <div className="flex justify-center gap-2 text-orange-500 mb-6 md:mb-8">
+        {[...Array(5)].map((_, s) => (
+          <Star key={s} size={20} fill="currentColor" />
+        ))}
+      </div>
+
+      {/* 🔥 BIG TEXT */}
+      <p className="text-xl sm:text-2xl md:text-4xl font-semibold leading-relaxed text-white mb-10 md:mb-12 italic">
+        "{t.text}"
+      </p>
+
+      {/* 👤 Profile */}
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+
+        <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-orange-500 p-[2px]">
+          <div className="w-full h-full rounded-full overflow-hidden bg-[#0f172a]">
+            
+            {t.image ? (
+              <img
+                src={t.image}
+                alt={t.name}
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <div className="flex items-center justify-center h-full font-bold text-white text-lg">
+                {t.initials}
               </div>
+            )}
 
-              {/* 🔥 BIG TEXT */}
-              <p className="text-xl sm:text-2xl md:text-4xl font-semibold leading-relaxed text-white mb-10 md:mb-12 italic">
-                "{t.text}"
-              </p>
-
-              {/* 👤 Profile */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-orange-500 p-[2px]">
-                  <div className="w-full h-full rounded-full bg-[#0f172a] flex items-center justify-center font-bold text-white text-lg">
-                    {t.initials}
-                  </div>
-                </div>
-                <div className="text-center sm:text-left">
-                  <p className="font-bold text-lg text-white">{t.name}</p>
-                  <p className="text-xs md:text-sm text-slate-400 uppercase tracking-widest">
-                    {t.role}
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
-        </section>
+        </div>
+
+        <div className="text-center sm:text-left">
+          <p className="font-bold text-lg text-white">{t.name}</p>
+          <p className="text-xs md:text-sm text-slate-400 uppercase tracking-widest">
+            {t.role}
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
       </div>
     </div>
   );
