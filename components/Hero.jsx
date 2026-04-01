@@ -51,7 +51,7 @@ const Hero = () => {
     { label: "Rodent", angle: 288 },
   ];
 
-  const radius = 350;
+const radius = 375 - 80;
   const services = [
     {
       title: "Pest Control",
@@ -106,6 +106,17 @@ const Hero = () => {
   }, [testimonials.length]);
 
   const t = testimonials[index];
+  const [stars, setStars] = useState([]);
+
+  useEffect(() => {
+    const s = Array.from({ length: 25 }, () => ({
+      left: Math.random() * 100,
+      top: Math.random() * 100,
+    }));
+    setStars(s);
+  }, []);
+
+  
 
   return (
     <div className="  text-white  overflow-x-hidden">
@@ -177,8 +188,39 @@ const Hero = () => {
         </section>
 
         {/* SERVICES SECTION */}
-        <section className="relative bg-[#F3BE7A] py-16 md:py-24 px-4 md:px-12 lg:px-20">
-          <div className="absolute inset-0 -z-10">
+<section className="relative bg-[#F3BE7A] py-16 md:py-24 px-4 md:px-12 lg:px-20 overflow-hidden">
+
+  <div
+  className="absolute inset-0 pointer-events-none"
+  style={{
+    backgroundImage: `radial-gradient(rgba(0,0,0,0.22) 1.5px, transparent 1.5px)`,
+    backgroundSize: "18px 18px",
+  }}
+/>
+
+  {/* 🔥 TOP LIGHT (VISIBLE) */}
+  <div
+    className="absolute inset-0 pointer-events-none"
+    style={{
+      background: "linear-gradient(to bottom, rgba(255,255,255,0.35), transparent 40%)"
+    }}
+  />
+
+  {/* 🔥 BOTTOM SHADOW (DEPTH) */}
+  <div
+    className="absolute inset-0 pointer-events-none"
+    style={{
+      background: "linear-gradient(to top, rgba(0,0,0,0.25), transparent 50%)"
+    }}
+  />
+
+  {/* 🔥 CENTER LIGHT */}
+  <div
+    className="absolute inset-0 pointer-events-none"
+    style={{
+      background: "radial-gradient(circle at center, rgba(255,255,255,0.15), transparent 60%)"
+    }}
+  />          <div className="absolute inset-0 -z-10">
             <img
               src="/images/bg-service.jpg"
               alt="service"
@@ -235,83 +277,137 @@ const Hero = () => {
           </div>
         </section>
 
-        {/* 3. LPC ECOSYSTEM */}
-        <section className="py-20 md:py-32 relative overflow-hidden bg-[#492403]">
-          <div
-  className="absolute inset-0 z-0 opacity-40 pointer-events-none"
-  style={{
-    backgroundImage: "url('/images/download.jpg')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  }}
-/>
+      <section className="relative min-h-screen py-3 md:py-10 w-full flex flex-col items-center justify-center overflow-hidden bg-[#1a0f08]">
+      
+      {/* 1. BACKGROUND LAYER */}
+      <div className="absolute inset-0 z-0">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/bg-orbit.png')" }}
+        />
+        
+        {/* Soft Wooden Dark Brown Overlay */}
+        <div 
+          className="absolute inset-0 pointer-events-none" 
+          style={{
+            background: `linear-gradient(to bottom, rgba(60,35,20,0.4), rgba(25,12,5,0.7))`
+          }}
+        />
+
+        {/* Center Glow Aura */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(249,115,22,0.12),transparent_60%)]" />
+
+        {/* ✨ Sparkles */}
+        <div className="absolute inset-0 z-10 pointer-events-none">
+          {stars.map((s, i) => (
+            <div
+              key={i}
+              className="absolute w-1 h-1 bg-orange-200 rounded-full opacity-70 animate-pulse"
+              style={{
+                left: `${s.left}%`,
+                top: `${s.top}%`,
+              }}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* 2. HEADER */}
+      <div className="relative z-20 text-center mb-6 md:mb-12 px-6">
+        <h2 className="text-4xl md:text-6xl font-black mb-2 italic text-white uppercase tracking-tighter drop-shadow-2xl">
+          The LPC Ecosystem
+        </h2>
+        <p className="text-orange-500 font-bold tracking-[0.4em] uppercase text-[10px] md:text-xs">
+          360° Shield Technology
+        </p>
+      </div>
+
+      {/* 3. ORBIT SYSTEM */}
+      <div className="relative z-10 flex justify-center items-center w-full h-[420px] md:h-[650px]">
+        
+        {/* Scaling Wrapper for Responsiveness */}
+        <div className="relative flex justify-center items-center scale-[0.4] sm:scale-[0.6] md:scale-[0.8] lg:scale-90 xl:scale-100 transition-transform duration-700">
           
-          <div className="relative z-10 container mx-auto px-6 text-center mb-10 md:mb-20">
-            <h2 className="text-3xl md:text-6xl font-black mb-4 italic text-white uppercase">
-              The LPC Ecosystem
-            </h2>
-            <p className="text-orange-500 font-bold tracking-widest uppercase text-xs md:text-sm">
-              360° Shield Technology
-            </p>
-          </div>
+          {/* ORBIT RINGS */}
+          <div className="absolute w-[300px] h-[300px] border border-white/20 rounded-full" />
+          
+          <div 
+            className="absolute w-[550px] h-[550px] border border-white/30 rounded-full" 
+            style={{ boxShadow: '0 0 50px rgba(255,255,255,0.05)' }}
+          />
 
-          <div className="relative z-10 flex justify-center items-center h-[500px] md:h-[750px]">
-            {/* Scale Wrapper for Mobile Orbit */}
-            <div className="relative flex justify-center items-center scale-[0.55] sm:scale-[0.8] md:scale-100 transition-transform duration-500">
-                <div className="absolute w-[400px] h-[400px] border border-white rounded-full" />
-                <div className="absolute w-[700px] h-[700px] border border-white rounded-full shadow-[0_0_60px_rgba(59,130,246,0.2)]" />
+          {/* CENTER CORE */}
+          <motion.div
+            animate={{ 
+              boxShadow: [
+                "0 0 40px rgba(249,115,22,0.5), 0 0 80px rgba(249,115,22,0.6), 0 0 120px rgba(249,115,22,0.4)",
+                "0 0 80px rgba(249,115,22,0.8), 0 0 160px rgba(249,115,22,0.9), 0 0 220px rgba(249,115,22,0.6)",
+                "0 0 40px rgba(249,115,22,0.5), 0 0 80px rgba(249,115,22,0.6), 0 0 120px rgba(249,115,22,0.4)"
+              ]
+            }}
+            transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+            className="z-30 w-48 h-48 bg-gradient-to-br from-orange-600 to-orange-500 border-2 border-orange-300/40 rounded-full flex flex-col items-center justify-center text-white relative"
+          >
+            <div className="absolute inset-0 rounded-full bg-orange-400/20 blur-2xl" />
 
-                <motion.div
-                animate={{
-                    boxShadow: ["0 0 20px rgba(249,115,22,0.3)", "0 0 60px rgba(249,115,22,0.6)", "0 0 20px rgba(249,115,22,0.3)"]
+            <Zap className="text-white fill-white mb-2" size={44} />
+            <span className="font-black text-2xl text-center leading-none tracking-tighter">
+              PEST <br /> CONTROL
+            </span>
+
+            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-transparent via-white/10 to-white/30 pointer-events-none" />
+          </motion.div>
+
+          {/* ROTATING PLANETS */}
+          <motion.div
+            className="absolute w-[750px] h-[750px] rounded-full pointer-events-none"
+            animate={{ rotate: 360 }}
+            transition={{ repeat: Infinity, duration: 45, ease: "linear" }}
+          >
+            {items.map((item, i) => (
+              <div
+                key={i}
+                className="absolute top-1/2 left-1/2"
+                style={{
+                  transform: `translate(-50%, -50%) rotate(${item.angle}deg) translateY(-${radius}px)`
                 }}
-                transition={{ repeat: Infinity, duration: 3 }}
-                className="z-20 w-56 h-56 bg-orange-500/20 backdrop-blur-[40px] border border-orange-400 rounded-full flex flex-col items-center justify-center text-white shadow-[0_0_60px_rgba(249,115,22,0.5)]"
+              >
+                <motion.div 
+                  animate={{ rotate: -360 }}
+                  transition={{ repeat: Infinity, duration: 45, ease: "linear" }}
+                  className="group pointer-events-auto"
                 >
-                <Zap className="text-orange-400 mb-2" size={44} />
-                <span className="font-black text-xl text-center leading-tight">
-                    PEST <br /> CONTROL
-                </span>
-                </motion.div>
+                  <div 
+                    className="
+                      relative w-32 h-32 
+                      bg-white/10 backdrop-blur-2xl 
+                      border border-white/30 rounded-full 
+                      flex items-center justify-center 
+                      transition-all duration-500 cursor-pointer
+                      hover:scale-110 hover:border-orange-400/50
+                      shadow-[0_0_30px_rgba(255,255,255,0.05)]
+                      hover:shadow-[0_0_40px_rgba(249,115,22,0.4)]
+                    "
+                  >
+                    <div className="absolute top-3 left-6 w-12 h-5 bg-white/20 rounded-full blur-md -rotate-45" />
+                    
+                    <span className="text-xs font-black text-white uppercase tracking-widest text-center px-3 select-none drop-shadow-md">
+                      {item.label}
+                    </span>
 
-                <motion.div
-                className="absolute w-[700px] h-[700px] rounded-full pointer-events-none"
-                animate={{ rotate: 360 }}
-                transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
-                >
-                {items.map((item, i) => (
-                    <div
-                    key={i}
-                    className="absolute top-1/2 left-1/2"
-                    style={{
-                        transform: `translate(-50%, -50%) rotate(${item.angle}deg) translateY(-${radius}px)`
-                    }}
-                    >
-                    <div style={{ transform: `rotate(-${item.angle}deg)` }}>
-                        <motion.div
-                        animate={{ rotate: -360 }}
-                        transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
-                        className="
-                            w-32 h-32 pointer-events-auto
-                            bg-white/5 backdrop-blur-[25px] 
-                            border border-white/20 text-white
-                            rounded-full flex items-center justify-center 
-                            text-center px-3 hover:bg-orange-500 hover:scale-110 
-                            transition-all duration-500 cursor-pointer 
-                            shadow-[0_0_25px_rgba(255,255,255,0.1)]
-                        "
-                        >
-                        <span className="text-sm font-bold uppercase leading-tight select-none">
-                            {item.label}
-                        </span>
-                        </motion.div>
-                    </div>
-                    </div>
-                ))}
+                    <div className="absolute inset-0 rounded-full bg-orange-500/0 group-hover:bg-orange-500/10 transition-colors duration-500" />
+                  </div>
                 </motion.div>
-            </div>
-          </div>
-        </section>
+              </div>
+            ))}
+          </motion.div>
+
+        </div>
+      </div>
+
+      {/* Bottom Vignette */}
+      <div className="absolute bottom-0 w-full h-40 bg-gradient-to-t from-[#120804] to-transparent z-10" />
+</section>
 
         {/* LOGO MARQUEE */}
         <section className="py-12 md:py-20 bg-[#f5d4aa] overflow-hidden">

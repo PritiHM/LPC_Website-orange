@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-blue-950 text-white pt-12 pb-6 px-4 md:px-10">
+    <footer className="bg-gradient-to-b from-[#6b4226] via-[#4a2f1d] to-[#2b1a12] text-white pt-12 pb-6 px-4 md:px-10">
       
 
       <div className="max-w-7xl mx-auto grid gap-10 md:grid-cols-4">
