@@ -71,7 +71,7 @@ const radius = 375 - 80;
     },
     {
       title: "Carpet/Rubber Flooring",
-      desc: "Complete care and maintenance for rubber flooring.",
+      desc: "Innovative Carpet, Wooden & Rubber Flooring – Designed, Supplied & Installed to Perfection.",
       img: "/images/rubber florring.webp",
     },
   ];
@@ -188,88 +188,88 @@ const radius = 375 - 80;
           </div>
         </section>
 
-      <section className="relative py-16 md:py-24 px-4 md:px-12 lg:px-20 overflow-hidden bg-gradient-to-br from-[#f5c38a] via-[#e6a96b] to-[#d89455]">
+   <section className="relative py-16 md:py-24 px-4 md:px-12 lg:px-20 overflow-hidden bg-[#e9b384]">
+  {/* 🔥 EXACT DOT PATTERN - Matches screenshot spacing and opacity */}
+  <div
+    className="absolute inset-0 pointer-events-none"
+    style={{
+      backgroundImage: `radial-gradient(rgba(0,0,0,0.18) 1.2px, transparent 1.2px)`,
+      backgroundSize: "24px 24px",
+    }}
+  />
 
-      {/* 🔥 DOT PATTERN */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage: `radial-gradient(rgba(0,0,0,0.15) 1.5px, transparent 1.5px)`,
-          backgroundSize: "18px 18px",
-        }}
-      />
+  {/* 🔥 SCREENSHOT LIGHTING EFFECTS */}
+  <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-white/20 via-transparent to-black/5" />
 
-      {/* 🔥 LIGHT EFFECTS */}
-      <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-white/30 to-transparent" />
-      <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/20 to-transparent" />
-      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.2),transparent_60%)]" />
+  <div className="max-w-7xl mx-auto relative z-10">
+    {/* TITLE */}
+    <div className="text-center mb-12 md:mb-16">
+      <h2 className="text-3xl md:text-5xl font-bold text-[#332211] mb-4">
+        Our Services
+      </h2>
+      <div className="w-20 md:w-24 h-1 bg-[#d38b5d] mx-auto rounded-full" />
+    </div>
 
-      {/* 🔥 GLOW BLOBS */}
-      <div className="absolute top-20 left-1/4 w-72 h-72 bg-white/20 blur-[120px] rounded-full"></div>
-      <div className="absolute bottom-10 right-1/4 w-72 h-72 bg-orange-300/20 blur-[120px] rounded-full"></div>
+    {/* 🔥 CARDS GRID - Exact Screenshot Glass Effect */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-10">
+      {services.slice(0, 3).map((service, i) => (
+        <div
+          key={i}
+          className="bg-white/30 backdrop-blur-[12px] border border-white/40 rounded-[2.5rem] p-8 text-center 
+                     shadow-[0_20px_50px_rgba(0,0,0,0.1)] 
+                     hover:shadow-[0_25px_60px_rgba(0,0,0,0.15)] 
+                     transition-all duration-500 ease-out group"
+        >
+          {/* Image Container with specific padding like screenshot */}
+          <div className="overflow-hidden rounded-2xl mb-8 shadow-sm">
+            <img
+              src={service.img}
+              alt={service.title}
+              className="w-full h-44 object-cover transform group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
 
-      <div className="max-w-7xl mx-auto relative z-10">
+          <h3 className="text-2xl font-bold text-[#2d1b0d] mb-3">
+            {service.title}
+          </h3>
 
-        {/* TITLE */}
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-black mb-4">
-            Our Services
-          </h2>
-          <div className="w-20 md:w-24 h-1 bg-orange-500 mx-auto rounded-full" />
+          <p className="text-[#4a3728] text-[15px] leading-relaxed">
+            {service.desc}
+          </p>
         </div>
+      ))}
+    </div>
 
-        {/* 🔥 CARDS GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 mb-10">
+    {/* 🔥 BIG CENTER CARD */}
+    <div className="flex justify-center">
+      {services.slice(3, 4).map((service, i) => (
+        <div
+          key={i}
+          className="bg-white/30 backdrop-blur-[12px] border border-white/40 rounded-[3rem] p-8 md:p-10 text-center 
+                     w-full md:w-[75%] shadow-[0_20px_50px_rgba(0,0,0,0.1)] 
+                     hover:shadow-[0_25px_60px_rgba(0,0,0,0.15)] 
+                     transition-all duration-500 group"
+        >
+          <div className="overflow-hidden rounded-3xl mb-8 shadow-sm">
+            <img
+              src={service.img}
+              alt={service.title}
+              className="w-full h-56 md:h-72 object-cover transform group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
 
-          {services.slice(0, 3).map((service, i) => (
-            <div
-              key={i}
-              className="bg-white/25 backdrop-blur-xl border border-white/40 rounded-3xl p-6 text-center shadow-[0_8px_30px_rgba(0,0,0,0.15)] hover:shadow-[0_10px_40px_rgba(0,0,0,0.25)] hover:scale-105 hover:-translate-y-2 transition-all duration-300"
-            >
-              <img
-                src={service.img}
-                alt={service.title}
-                className="w-full h-40 object-cover rounded-2xl mb-6 shadow-md"
-              />
+          <h3 className="text-3xl font-bold text-[#2d1b0d] mb-4">
+            {service.title}
+          </h3>
 
-              <h3 className="text-xl md:text-2xl font-semibold text-black mb-2">
-                {service.title}
-              </h3>
-
-              <p className="text-black/70 text-sm leading-relaxed">
-                {service.desc}
-              </p>
-            </div>
-          ))}
-
+          <p className="text-[#4a3728] text-lg max-w-2xl mx-auto leading-relaxed">
+            {service.desc}
+          </p>
         </div>
-
-        {/* 🔥 BIG CENTER CARD */}
-        <div className="flex justify-center">
-          {services.slice(3, 4).map((service, i) => (
-            <div
-              key={i}
-              className="bg-white/25 backdrop-blur-xl border border-white/40 rounded-3xl p-6 md:p-8 text-center w-full md:w-[60%] shadow-[0_8px_30px_rgba(0,0,0,0.15)] hover:shadow-[0_10px_40px_rgba(0,0,0,0.25)] hover:scale-105 hover:-translate-y-2 transition-all duration-300"
-            >
-              <img
-                src={service.img}
-                alt={service.title}
-                className="w-full h-44 md:h-52 object-cover rounded-2xl mb-6 shadow-md"
-              />
-
-              <h3 className="text-2xl md:text-3xl font-semibold text-black mb-3">
-                {service.title}
-              </h3>
-
-              <p className="text-black/70 text-sm max-w-xl mx-auto">
-                {service.desc}
-              </p>
-            </div>
-          ))}
-        </div>
-
-      </div>
-    </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       <section className="relative min-h-screen py-3 md:py-10 w-full flex flex-col items-center justify-center overflow-hidden bg-[#1a0f08]">
       
