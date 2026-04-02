@@ -3,12 +3,12 @@ import React from "react";
 
 const AboutPage = () => {
   return (
-    <main className="pt-20 min-h-screen bg-gradient-to-br from-[#0b1220] via-[#0d1b2a] to-[#1a120b] text-white overflow-hidden">
+    <main className="pt-20 min-h-screen bg-gradient-to-br from-[#1a120b] via-[#2b1d0e] to-[#5a3e1b] text-white overflow-hidden">
 
       {/* BACKGROUND GLOW */}
       <div className="fixed inset-0 pointer-events-none">
-        <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-orange-500/20 blur-[140px] rounded-full" />
-        <div className="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-blue-500/20 blur-[140px] rounded-full" />
+        <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-[#ff9f1c]/20 blur-[140px] rounded-full" />
+        <div className="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-[#5a3e1b]/30 blur-[140px] rounded-full" />
       </div>
 
       {/* HERO */}
@@ -17,9 +17,9 @@ const AboutPage = () => {
 
           {/* LEFT */}
           <div className="w-full lg:w-1/2 z-10 p-10 lg:p-24 flex flex-col justify-center space-y-6 
-          bg-gradient-to-br from-[#0b1220]/80 via-[#0d1b2a]/70 to-[#3b2a1a]/70 backdrop-blur-xl">
+          bg-gradient-to-br from-[#1a120b]/85 via-[#2b1d0e]/75 to-[#1a120b]/75 backdrop-blur-xl">
 
-            <div className="text-[#ffb84e] text-xs font-bold uppercase tracking-[0.3em]">
+            <div className="text-[#ff9f1c] text-xs font-bold uppercase tracking-[0.3em]">
               About LPC Facility
             </div>
 
@@ -32,7 +32,7 @@ const AboutPage = () => {
               mobile app, or direct contact — ensuring a smooth and responsive service experience.
             </p>
 
-            <button className="w-fit px-8 py-3 bg-[#ff9f43] hover:bg-[#e6892e] rounded-full font-semibold shadow-lg shadow-orange-500/20 transition-all">
+            <button className="w-fit px-8 py-3 bg-[#ff9f1c] hover:bg-[#e6892e] rounded-full font-semibold shadow-lg shadow-[#ff9f1c]/20 transition-all">
               Get Service
             </button>
           </div>
@@ -78,20 +78,20 @@ const AboutPage = () => {
           </div>
 
           {/* GLASS CARD */}
-          <div className="p-10 rounded-[2rem] bg-white/5 backdrop-blur-xl border border-orange-200/10 shadow-[0_20px_60px_rgba(0,0,0,0.5)] space-y-6">
+          <div className="p-10 rounded-[2rem] bg-[#2b1d0e]/40 backdrop-blur-xl border border-[#ff9f1c]/20 shadow-[0_20px_60px_rgba(0,0,0,0.5)] space-y-6">
 
-            <h3 className="text-2xl font-bold text-[#ffb84e]">
+            <h3 className="text-2xl font-bold text-[#ff9f1c]">
               Why Choose Us
             </h3>
 
             <ul className="space-y-4 text-gray-300 text-sm">
-              <li>✔ High-quality chemicals manufactured in India by certified brands</li>
-              <li>✔ Preventive measures and advanced pest removal methods</li>
-              <li>✔ Highly skilled professionals</li>
-              <li>✔ 100% safe and eco-friendly chemicals</li>
-              <li>✔ Gel & herbal treatment available</li>
-              <li>✔ Service warranty provided</li>
-              <li>✔ Affordable pricing & on-time service</li>
+              <li><span className="text-[#ff9f1c]">✔</span> High-quality chemicals manufactured in India by certified brands</li>
+              <li><span className="text-[#ff9f1c]">✔</span> Preventive measures and advanced pest removal methods</li>
+              <li><span className="text-[#ff9f1c]">✔</span> Highly skilled professionals</li>
+              <li><span className="text-[#ff9f1c]">✔</span> 100% safe and eco-friendly chemicals</li>
+              <li><span className="text-[#ff9f1c]">✔</span> Gel & herbal treatment available</li>
+              <li><span className="text-[#ff9f1c]">✔</span> Service warranty provided</li>
+              <li><span className="text-[#ff9f1c]">✔</span> Affordable pricing & on-time service</li>
             </ul>
 
           </div>
@@ -102,24 +102,24 @@ const AboutPage = () => {
       <section className="pb-24 px-6 lg:px-24">
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
 
-          <div className="p-8 bg-white/5 backdrop-blur-xl border border-orange-200/10 rounded-3xl">
-            <h3 className="text-xl font-bold text-[#ffb84e] mb-3">Our Mission</h3>
+          <div className="p-8 bg-[#2b1d0e]/40 backdrop-blur-xl border border-[#ff9f1c]/20 rounded-3xl">
+            <h3 className="text-xl font-bold text-[#ff9f1c] mb-3">Our Mission</h3>
             <p className="text-gray-300 text-sm">
               Deliver safe, effective, and innovative pest control solutions that ensure
               healthier environments.
             </p>
           </div>
 
-          <div className="p-8 bg-white/5 backdrop-blur-xl border border-orange-200/10 rounded-3xl">
-            <h3 className="text-xl font-bold text-[#ffb84e] mb-3">Our Vision</h3>
+          <div className="p-8 bg-[#2b1d0e]/40 backdrop-blur-xl border border-[#ff9f1c]/20 rounded-3xl">
+            <h3 className="text-xl font-bold text-[#ff9f1c] mb-3">Our Vision</h3>
             <p className="text-gray-300 text-sm">
               To become a trusted leader in pest management through technology,
               sustainability, and excellence.
             </p>
           </div>
 
-          <div className="p-8 bg-white/5 backdrop-blur-xl border border-orange-200/10 rounded-3xl">
-            <h3 className="text-xl font-bold text-[#ffb84e] mb-3">Our Commitment</h3>
+          <div className="p-8 bg-[#2b1d0e]/40 backdrop-blur-xl border border-[#ff9f1c]/20 rounded-3xl">
+            <h3 className="text-xl font-bold text-[#ff9f1c] mb-3">Our Commitment</h3>
             <p className="text-gray-300 text-sm">
               We ensure quality service, customer satisfaction, and long-term pest prevention.
             </p>
