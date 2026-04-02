@@ -53,4 +53,111 @@ body {
 
 .animate-fade {
   animation: fade 3s ease-in-out infinite;
+}/* ============================= */
+/* 🔥 MARQUEE BASE */
+/* ============================= */
+
+.marquee {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  padding: 10px 0;
+}
+
+/* TRACK */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 60px;
+  will-change: transform;
+}
+
+/* ============================= */
+/* 🔥 LOGO STYLING */
+/* ============================= */
+
+.marquee-track img {
+  height: 70px;              /* mobile */
+  object-fit: contain;
+  opacity: 1;               /* remove blur look */
+  filter: none;
+  image-rendering: auto;
+  transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.marquee-track img:hover {
+  transform: scale(1.15);
+}
+
+/* DESKTOP SIZE */
+@media (min-width: 768px) {
+  .marquee-track img {
+    height: 90px;
+  }
+}
+
+/* ============================= */
+/* 🔥 ANIMATIONS */
+/* ============================= */
+
+/* LEFT SCROLL */
+.marquee-track.left {
+  animation: scrollLeft 25s linear infinite;
+}
+
+/* RIGHT SCROLL */
+.marquee-track.right {
+  animation: scrollRight 25s linear infinite;
+}
+
+/* KEYFRAMES */
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* ============================= */
+/* 🔥 OPTIONAL PREMIUM EFFECTS */
+/* ============================= */
+
+/* hover pause */
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* fade edges (optional use) */
+.marquee::before,
+.marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  z-index: 2;
+}
+
+.marquee::before {
+  left: 0;
+  background: linear-gradient(to right, #f5d4aa, transparent);
+}
+
+.marquee::after {
+  right: 0;
+  background: linear-gradient(to left, #f5d4aa, transparent);
 }

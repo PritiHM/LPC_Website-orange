@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import "../app/globals.css"
 import { motion } from "framer-motion";
 import {
   Sparkles,
@@ -69,7 +70,7 @@ const radius = 375 - 80;
       img: "/images/marbel-polishing.jpg",
     },
     {
-      title: "Rubber Flooring",
+      title: "Carpet/Rubber Flooring",
       desc: "Complete care and maintenance for rubber flooring.",
       img: "/images/rubber florring.webp",
     },
@@ -187,95 +188,88 @@ const radius = 375 - 80;
           </div>
         </section>
 
-        {/* SERVICES SECTION */}
-<section className="relative bg-[#F3BE7A] py-16 md:py-24 px-4 md:px-12 lg:px-20 overflow-hidden">
+      <section className="relative py-16 md:py-24 px-4 md:px-12 lg:px-20 overflow-hidden bg-gradient-to-br from-[#f5c38a] via-[#e6a96b] to-[#d89455]">
 
-  <div
-  className="absolute inset-0 pointer-events-none"
-  style={{
-    backgroundImage: `radial-gradient(rgba(0,0,0,0.22) 1.5px, transparent 1.5px)`,
-    backgroundSize: "18px 18px",
-  }}
-/>
+      {/* 🔥 DOT PATTERN */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: `radial-gradient(rgba(0,0,0,0.15) 1.5px, transparent 1.5px)`,
+          backgroundSize: "18px 18px",
+        }}
+      />
 
-  {/* 🔥 TOP LIGHT (VISIBLE) */}
-  <div
-    className="absolute inset-0 pointer-events-none"
-    style={{
-      background: "linear-gradient(to bottom, rgba(255,255,255,0.35), transparent 40%)"
-    }}
-  />
+      {/* 🔥 LIGHT EFFECTS */}
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-white/30 to-transparent" />
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/20 to-transparent" />
+      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.2),transparent_60%)]" />
 
-  {/* 🔥 BOTTOM SHADOW (DEPTH) */}
-  <div
-    className="absolute inset-0 pointer-events-none"
-    style={{
-      background: "linear-gradient(to top, rgba(0,0,0,0.25), transparent 50%)"
-    }}
-  />
+      {/* 🔥 GLOW BLOBS */}
+      <div className="absolute top-20 left-1/4 w-72 h-72 bg-white/20 blur-[120px] rounded-full"></div>
+      <div className="absolute bottom-10 right-1/4 w-72 h-72 bg-orange-300/20 blur-[120px] rounded-full"></div>
 
-  {/* 🔥 CENTER LIGHT */}
-  <div
-    className="absolute inset-0 pointer-events-none"
-    style={{
-      background: "radial-gradient(circle at center, rgba(255,255,255,0.15), transparent 60%)"
-    }}
-  />          <div className="absolute inset-0 -z-10">
-            <img
-              src="/images/bg-service.jpg"
-              alt="service"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
-          </div>
-          
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12 md:mb-16">
-              <h2 className="text-3xl md:text-5xl font-bold text-black mb-4">
-                Our Services
-              </h2>
-              <div className="w-20 md:w-24 h-1 bg-orange-500 mx-auto rounded-full" />
+      <div className="max-w-7xl mx-auto relative z-10">
+
+        {/* TITLE */}
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold text-black mb-4">
+            Our Services
+          </h2>
+          <div className="w-20 md:w-24 h-1 bg-orange-500 mx-auto rounded-full" />
+        </div>
+
+        {/* 🔥 CARDS GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 mb-10">
+
+          {services.slice(0, 3).map((service, i) => (
+            <div
+              key={i}
+              className="bg-white/25 backdrop-blur-xl border border-white/40 rounded-3xl p-6 text-center shadow-[0_8px_30px_rgba(0,0,0,0.15)] hover:shadow-[0_10px_40px_rgba(0,0,0,0.25)] hover:scale-105 hover:-translate-y-2 transition-all duration-300"
+            >
+              <img
+                src={service.img}
+                alt={service.title}
+                className="w-full h-40 object-cover rounded-2xl mb-6 shadow-md"
+              />
+
+              <h3 className="text-xl md:text-2xl font-semibold text-black mb-2">
+                {service.title}
+              </h3>
+
+              <p className="text-black/70 text-sm leading-relaxed">
+                {service.desc}
+              </p>
             </div>
+          ))}
 
-            <div className="relative z-10">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 mb-6 md:mb-10 text-center">
-                {services.slice(0, 3).map((service, i) => (
-                  <GlassCard key={i} className="p-6 min-h-[300px] md:min-h-[320px] hover:scale-105 transition duration-300">
-                    <img
-                      src={service.img}
-                      alt={service.title}
-                      className="w-full h-40 object-cover rounded-xl mb-6"
-                    />
-                    <h3 className="text-xl md:text-2xl text-black font-bold mb-2">
-                      {service.title}
-                    </h3>
-                    <p className="text-black text-sm">
-                      {service.desc}
-                    </p>
-                  </GlassCard>
-                ))}
-              </div>
+        </div>
 
-              <div className="flex justify-center">
-                {services.slice(3, 4).map((service, i) => (
-                  <GlassCard key={i} className="p-6 md:p-8 min-h-[300px] md:min-h-[350px] w-full md:w-[60%] text-center hover:scale-105 transition duration-300">
-                    <img
-                      src={service.img}
-                      alt={service.title}
-                      className="w-full h-40 md:h-48 object-cover rounded-xl mb-6"
-                    />
-                    <h3 className="text-2xl md:text-3xl text-black font-bold mb-3">
-                      {service.title}
-                    </h3>
-                    <p className="text-black text-sm max-w-xl mx-auto">
-                      {service.desc}
-                    </p>
-                  </GlassCard>
-                ))}
-              </div>
+        {/* 🔥 BIG CENTER CARD */}
+        <div className="flex justify-center">
+          {services.slice(3, 4).map((service, i) => (
+            <div
+              key={i}
+              className="bg-white/25 backdrop-blur-xl border border-white/40 rounded-3xl p-6 md:p-8 text-center w-full md:w-[60%] shadow-[0_8px_30px_rgba(0,0,0,0.15)] hover:shadow-[0_10px_40px_rgba(0,0,0,0.25)] hover:scale-105 hover:-translate-y-2 transition-all duration-300"
+            >
+              <img
+                src={service.img}
+                alt={service.title}
+                className="w-full h-44 md:h-52 object-cover rounded-2xl mb-6 shadow-md"
+              />
+
+              <h3 className="text-2xl md:text-3xl font-semibold text-black mb-3">
+                {service.title}
+              </h3>
+
+              <p className="text-black/70 text-sm max-w-xl mx-auto">
+                {service.desc}
+              </p>
             </div>
-          </div>
-        </section>
+          ))}
+        </div>
+
+      </div>
+    </section>
 
       <section className="relative min-h-screen py-3 md:py-10 w-full flex flex-col items-center justify-center overflow-hidden bg-[#1a0f08]">
       
@@ -409,21 +403,39 @@ const radius = 375 - 80;
       <div className="absolute bottom-0 w-full h-40 bg-gradient-to-t from-[#120804] to-transparent z-10" />
 </section>
 
-        {/* LOGO MARQUEE */}
-        <section className="py-12 md:py-20 bg-[#f5d4aa] overflow-hidden">
-          <div className="relative w-full overflow-hidden">
-            <div className="flex w-max animate-marquee gap-10 md:gap-20 items-center">
-              {[...logos, ...logos].map((logo, i) => (
-                <img
-                  key={i}
-                  src={logo}
-                  alt="client"
-                  className="h-10 md:h-18 w-auto object-contain opacity-70 hover:opacity-100 transition-all duration-300"
-                />
-              ))}
-            </div>
-          </div>
-        </section>
+      <section className="py-12 md:py-20 bg-[#f5d4aa] overflow-hidden">
+  <div className="space-y-8">
+
+{/* 🔥 ROW 1 */}
+<div className="relative overflow-hidden marquee py-4">
+  <div className="flex w-max items-center gap-16 marquee-track left">
+    {[...logos, ...logos].map((logo, i) => (
+      <img
+        key={i}
+        src={logo}
+        alt="client"
+        className="h-16 md:h-20 object-contain opacity-100 hover:scale-110 transition duration-300"
+      />
+    ))}
+  </div>
+</div>
+
+{/* 🔥 ROW 2 */}
+<div className="relative overflow-hidden marquee py-4">
+  <div className="flex w-max items-center gap-16 marquee-track right">
+    {[...logos, ...logos].map((logo, i) => (
+      <img
+        key={i}
+        src={logo}
+        alt="client"
+        className="h-16 md:h-20 object-contain opacity-100 hover:scale-110 transition duration-300"
+      />
+    ))}
+  </div>
+</div>
+
+  </div>
+</section>
 
         {/* TESTIMONIALS */}
         <section className="w-full py-8 md:py-15  text-center bg-[#bc8032] px-6">
