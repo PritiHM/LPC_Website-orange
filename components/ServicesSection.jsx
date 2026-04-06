@@ -1,4 +1,6 @@
 "use client"
+import Link from "next/link";
+
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -105,9 +107,11 @@ const ServicesSection = () => {
               Protect your home and business with advanced pest management solutions.
             </p>
 
-            <button className="bg-[#ff9f1c] text-[#1a120b] px-6 py-3 rounded-xl font-semibold shadow-lg hover:scale-105 transition">
-              Get Service
-            </button>
+           <Link href="/pestcontrol">
+  <button className="bg-[#ff9f1c] text-[#1a120b] px-6 py-3 rounded-xl font-semibold shadow-lg hover:scale-105 transition">
+    Get Service
+  </button>
+</Link>
 
           </div>
 

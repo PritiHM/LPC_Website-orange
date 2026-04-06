@@ -26,23 +26,45 @@ export default function Footer() {
         </div>
 
         {/* SERVICES */}
-        <div>
-          <h3 className="text-lg font-semibold mb-3 text-orange-300">Services</h3>
-          <ul className="space-y-2 text-orange-200 text-sm">
-            <li className="hover:text-orange-400 transition cursor-pointer">Pest Control</li>
-            <li className="hover:text-orange-400 transition cursor-pointer">Termite Treatment</li>
-            <li className="hover:text-orange-400 transition cursor-pointer">Rodent Control</li>
-            <li className="hover:text-orange-400 transition cursor-pointer">Sanitization</li>
-          </ul>
-        </div>
+<div>
+  <h3 className="text-lg font-semibold mb-3 text-orange-300">Services</h3>
 
+  <ul className="space-y-2 text-orange-200 text-sm">
+
+    <li className="hover:text-orange-400 transition cursor-pointer">
+      Pest Control
+    </li>
+
+   
+
+    <li className="hover:text-orange-400 transition cursor-pointer">
+      Carpet & Rubber Flooring
+    </li>
+
+    <li className="hover:text-orange-400 transition cursor-pointer">
+      Carpet Cleaning
+    </li>
+
+    <li className="hover:text-orange-400 transition cursor-pointer">
+      Marble Polishing
+    </li>
+
+    <li className="hover:text-orange-400 transition cursor-pointer">
+     other services
+    </li>
+
+    
+   </ul>
+</div>
         {/* CONTACT */}
         <div>
           <h3 className="text-lg font-semibold mb-3 text-orange-300">Contact</h3>
           <ul className="space-y-2 text-orange-200 text-sm">
-            <li>📍 Pune, Maharashtra</li>
-            <li>📞 +91 9876543210</li>
-            <li>✉️ info@lpcservices.com</li>
+            <li>📍 2/3, Sadguru Krupa CHS, Dharamveer Nagar, Atali Road,  
+        Ambivli West, Kalyan, Thane, Maharashtra - 421102</li>
+            <li>📞 +91 7506102007</li>
+             <li>📞 +91 9969504730</li>
+            <li>✉️ lpcfacility1121@gmail.com</li>
           </ul>
         </div>
 

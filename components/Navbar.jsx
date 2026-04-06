@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
@@ -59,7 +60,10 @@ export default function Navbar() {
             Get Quote
           </button>
 
-          <button className="md:hidden text-xl" onClick={() => setOpen(!open)}>
+          <button
+            className="md:hidden text-xl"
+            onClick={() => setOpen(!open)}
+          >
             {open ? "✖" : "☰"}
           </button>
         </div>
@@ -69,6 +73,7 @@ export default function Navbar() {
       {open && (
         <div className="px-4 pb-2">
           <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-4 text-black shadow-xl space-y-3">
+            
             <a href="/" className="block text-center hover:text-orange-400">Home</a>
             <a href="/about" className="block text-center hover:text-orange-400">About Us</a>
             <a href="/services" className="block text-center hover:text-orange-400">Services</a>
@@ -79,6 +84,7 @@ export default function Navbar() {
             <button className="w-full mt-2 bg-orange-400 hover:bg-orange-500 text-black px-3 py-2 rounded-full text-sm font-semibold">
               Get Quote
             </button>
+
           </div>
         </div>
       )}
