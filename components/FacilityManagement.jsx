@@ -3,6 +3,17 @@ import React from 'react';
 const FacilityManagement = () => {
   const mainServices = [
     {
+  title: "Carpet / Rubber Flooring",
+  description: "We provide professional cleaning and maintenance for carpet and rubber flooring to ensure hygiene, durability, and a fresh environment.",
+  process: ["Surface scrubbing", "Deep cleaning", "Stain removal & drying"],
+  image: "/images/marbel polishing.avif",
+  icon: (
+    <svg className="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 7h18M3 12h18M3 17h18" />
+    </svg>
+  )
+},
+    {
       title: "Carpet Cleaning",
       description: "Professional removal of bacteria, stains, and allergens for a pristine and healthy environment.",
       process: ["Deep extraction cleaning", "Odor neutralization", "Sanitization & drying"],

@@ -59,15 +59,7 @@ const ServicesSection = () => {
     }
   ];
 
-  const commercial = [
-    { title: 'Carpet Cleaning', desc: 'Deep-extraction steam cleaning for heavy-duty commercial carpets.' },
-    { title: 'Marble Polishing', desc: 'Diamond-grade polishing to restore shine to corporate lobbies.' },
-    { title: 'Bird Control Net', desc: 'High-density polyethylene (HDPE) netting for long-term balcony protection.' },
-    { title: 'Container Fumigation', desc: 'ISPM-15 compliant fumigation for export containers and wooden pallets.' },
-    { title: 'Tank & Drain Cleaning', desc: 'Automated high-pressure cleaning for industrial water storage systems.' },
-    { title: 'Sanitization', desc: 'Hospital-grade misting services for office spaces and industrial units.' },
-    { title: 'Jet Spray Cleaning', desc: 'Specialized pressure washing for building facades and heavy equipment.' }
-  ];
+ 
 
   return (
     <div className="min-h-screen bg-[#1a120b] text-stone-200 font-sans selection:bg-[#ff9f1c]/30 overflow-x-hidden">
@@ -148,46 +140,7 @@ const ServicesSection = () => {
         </div>
       </section>
 
-      {/* --- COMMERCIAL ACCORDION LIST --- */}
-      <section className="relative py-24 px-6 max-w-4xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 text-stone-100">Facility Management</h2>
-          <p className="text-stone-500">Corporate-grade cleaning and maintenance solutions.</p>
-        </div>
-
-        <div className="space-y-4">
-          {commercial.map((item, idx) => (
-            <div key={idx} className="rounded-2xl bg-[#2b1d0e]/40 border border-[#ff9f1c]/10 overflow-hidden">
-              <button 
-                onClick={() => setOpenCommercial(openCommercial === idx ? null : idx)}
-                className="w-full p-6 flex items-center justify-between hover:bg-[#ff9f1c]/5 transition-colors"
-              >
-                <span className="text-lg font-semibold text-stone-200">{item.title}</span>
-                <div className={`p-2 rounded-full transition-transform duration-300 ${openCommercial === idx ? 'rotate-180 bg-[#ff9f1c] text-[#1a120b]' : 'bg-[#ff9f1c]/10 text-[#ff9f1c]'}`}>
-                  <ChevronDown size={20} />
-                </div>
-              </button>
-              <AnimatePresence>
-                {openCommercial === idx && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                  >
-                    <div className="p-6 pt-0 text-stone-400 text-sm border-t border-[#ff9f1c]/10 bg-[#1a120b]/30">
-                      <p className="leading-relaxed mb-4">{item.desc}</p>
-                      <div className="flex items-center gap-4 text-[#ff9f1c]/80 text-xs font-bold uppercase">
-                        <span className="flex items-center gap-1"><ShieldCheck size={14}/> Certified Process</span>
-                        <span className="flex items-center gap-1"><CheckCircle2 size={14}/> 100% Safe</span>
-                      </div>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          ))}
-        </div>
-      </section>
+  
 
       {/* --- WORKFLOW SECTION --- */}
       <section className="relative py-24 px-6 max-w-7xl mx-auto">
