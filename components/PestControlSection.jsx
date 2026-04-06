@@ -227,7 +227,7 @@ Choose our reliable bed bug pest control services for complete relief, safe trea
                       Contact
                     </Link>
                     <a 
-                      href={`https://wa.me/917420806320?text=${encodeURIComponent(`Hello 👋,
+                      href={`https://wa.me/917506102007?text=${encodeURIComponent(`Hello 👋,
 I would like to enquire about your ${pest.title} service.
 Please share pricing, availability, and details.
 Thank you!`)}`}

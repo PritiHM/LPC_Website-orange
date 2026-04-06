@@ -43,7 +43,7 @@ const ContactSection = () => {
 
                 {/* WHATSAPP BUTTON */}
                 <a
-                  href="https://wa.me/917420806320?text=Hello%20I%20want%20to%20connect%20on%20WhatsApp"
+                  href="https://wa.me/917506102007?text=Hello%20I%20want%20to%20connect%20on%20WhatsApp"
                   target="_blank"
                   className="flex justify-center mt-4"
                 >
