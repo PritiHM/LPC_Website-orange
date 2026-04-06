@@ -27,8 +27,8 @@ const ServicesSection = () => {
       short: 'Complete eradication using high-heat and spray tech.',
       full: 'Our specialized bed bug treatment uses a dual-action approach: thermal remediation to kill eggs and eco-friendly chemical barriers for long-term mattress protection.',
       steps: ['Inspection', 'Heat Treatment', 'Chemical Spray', 'Certification'],
-      image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800',
-      gallery: ['https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=400', 'https://images.unsplash.com/photo-1581578731522-745d05ad9a2d?w=400']
+      image: '/images/bedbug1.png',
+      gallery: ['/images/bedbug2.png', '/images/bedbug3.png']
     },
     {
       id: 'mosquito',
@@ -36,8 +36,8 @@ const ServicesSection = () => {
       short: 'Advanced fogging and larva control for all-season safety.',
       full: 'We target both adult populations and breeding grounds. Our process includes thermal fogging for perimeters and larvicide application in stagnant water zones.',
       steps: ['Mapping', 'Larvicide', 'Fogging', 'Netting'],
-      image: 'https://images.unsplash.com/photo-1590634159381-8d264f6932e6?w=800',
-      gallery: ['https://images.unsplash.com/photo-1563132337-f159f484226c?w=400', 'https://images.unsplash.com/photo-1615811361523-6bd03d7748e7?w=400']
+      image: '/images/mosquitos1.png',
+      gallery: ['/images/mosquitos2.png', '/images/mosquitos3.png']
     },
     {
       id: 'rodent',
@@ -45,8 +45,8 @@ const ServicesSection = () => {
       short: 'Strategic exclusion and trapping for 100% elimination.',
       full: 'Total rodent management involving ultrasonic repellents, structural sealing of entry points, and humane baiting stations tailored for residential layouts.',
       steps: ['Entry Check', 'Sealing', 'Trapping', 'Sanitization'],
-      image: 'https://images.unsplash.com/photo-1453227588063-bb302b62f50b?w=800',
-      gallery: ['https://images.unsplash.com/photo-1590856029826-c7a73142bbf1?w=400', 'https://images.unsplash.com/photo-1558231261-f093122f87a6?w=400']
+      image: '/images/rodent1.png',
+      gallery: ['/images/rodent2.png', '/images/rodent3.png']
     },
     {
       id: 'termite',
@@ -54,8 +54,8 @@ const ServicesSection = () => {
       short: 'Pre & Post construction protection for your property.',
       full: 'Industry-leading sub-soil barriers and injection treatments. We use non-repellent liquid termiticides that eliminate entire colonies through contact.',
       steps: ['Drilling', 'Injection', 'Soil Barrier', 'Warranty'],
-      image: 'https://images.unsplash.com/photo-1621905252507-b354bcadc445?w=800',
-      gallery: ['https://images.unsplash.com/photo-1554224155-1696413565d3?w=400', 'https://images.unsplash.com/photo-1589939705384-5185138a04b9?w=400']
+      image: '/images/termite1.png',
+      gallery: ['/images/termite2.png', '/images/termite3.png']
     }
   ];
 
