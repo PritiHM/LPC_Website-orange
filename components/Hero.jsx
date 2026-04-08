@@ -29,27 +29,23 @@ const GlassCard = ({ children, className = "" }) => (
 );
 
 const logos = [
-  "/images/logo_page_1.png",
-  "/images/logo_page_2.png",
-  "/images/logo_page_3.png",
-  "/images/logo_page_6.png",
-  "/images/logo_page_5.png",
-  "/images/logo_page_6.png",
-  "/images/logo_page_7.png",
-  "/images/logo_page_8.png",
-  "/images/logo_page_9.png",
-  "/images/logo_page_10.png",
-  "/images/logo_page_11.png",
-  "/images/logo_page_12.png",
-];
+    "/images/logo_page_1.png", "/images/logo_page_2.png", "/images/logo_page_3.png", 
+    "/images/logo_page_12.png", "/images/logo_page_5.png", "/images/logo_page_6.png",
+    "/images/logo_page_7.png", "/images/logo_page_8.png", "/images/logo_page_9.png", 
+    "/images/logo_page_10.png", "/images/logo_page_11.png", "/images/logo_page_12.png"
+  ];
+
+  // Slice the logos into two groups of 6
+  const row1 = logos.slice(0, 6);
+  const row2 = logos.slice(6, 12);
 
 const Hero = () => {
   const items = [
-    { label: "Bed Bugs", angle: 0 },
-    { label: "Cockroach", angle: 72 },
-    { label: "Termite", angle: 144 },
-    { label: "Mosquito", angle: 216 },
-    { label: "Rodent", angle: 288 },
+    { label: "carpet & rubber flooring", angle: 0 },
+    { label: "carpet cleaning", angle: 72 },
+    { label: "bird control", angle: 144 },
+    { label: "tank & drain cleaning", angle: 216 },
+    { label: "jetspray cleaning", angle: 288 },
   ];
 
 const radius = 375 - 80;
@@ -62,7 +58,7 @@ const radius = 375 - 80;
     {
       title: "Carpet Cleaning",
       desc: "Deep cleaning for stain-free and hygienic carpets.",
-      img: "/images/carpet-cleaning.webp",
+      img: "/images/carpet-cleaning.jpg",
     },
     {
       title: "Marble Polishing",
@@ -70,9 +66,9 @@ const radius = 375 - 80;
       img: "/images/marbel-polishing.jpg",
     },
     {
-      title: "Carpet/Rubber Flooring",
+      title: "Carpet & Rubber Flooring",
       desc: "Innovative Carpet, Wooden & Rubber Flooring – Designed, Supplied & Installed to Perfection.",
-      img: "/images/rubber florring.webp",
+      img: "/images/carpet-flooring.jpg",
     },
   ];
 
@@ -270,8 +266,7 @@ const radius = 375 - 80;
     </div>
   </div>
 </section>
-
-      <section className="relative min-h-screen py-3 md:py-10 w-full flex flex-col items-center justify-center overflow-hidden bg-[#1a0f08]">
+<section className="relative min-h-screen py-3 md:py-10 w-full flex flex-col items-center justify-center overflow-hidden bg-[#1a0f08]">
       
       {/* 1. BACKGROUND LAYER */}
       <div className="absolute inset-0 z-0">
@@ -316,127 +311,129 @@ const radius = 375 - 80;
         </p>
       </div>
 
-      {/* 3. ORBIT SYSTEM */}
-      <div className="relative z-10 flex justify-center items-center w-full h-[420px] md:h-[650px]">
-        
-        {/* Scaling Wrapper for Responsiveness */}
-        <div className="relative flex justify-center items-center scale-[0.4] sm:scale-[0.6] md:scale-[0.8] lg:scale-90 xl:scale-100 transition-transform duration-700">
-          
-          {/* ORBIT RINGS */}
-          <div className="absolute w-[300px] h-[300px] border border-white/20 rounded-full" />
-          
-          <div 
-            className="absolute w-[550px] h-[550px] border border-white/30 rounded-full" 
-            style={{ boxShadow: '0 0 50px rgba(255,255,255,0.05)' }}
-          />
+     {/* 3. ORBIT SYSTEM */}
+<div className="relative z-10 flex justify-center items-center w-full h-[420px] md:h-[650px]">
+  
+  {/* Scaling Wrapper for Responsiveness */}
+  <div className="relative flex justify-center items-center scale-[0.4] sm:scale-[0.6] md:scale-[0.8] lg:scale-90 xl:scale-100 transition-transform duration-700">
+    
+    {/* ORBIT RINGS */}
+    <div className="absolute w-[300px] h-[300px] border border-white/20 rounded-full" />
+    
+    <div 
+      className="absolute w-[550px] h-[550px] border border-white/30 rounded-full" 
+      style={{ boxShadow: '0 0 50px rgba(255,255,255,0.05)' }}
+    />
 
-          {/* CENTER CORE */}
-          <motion.div
-            animate={{ 
-              boxShadow: [
-                "0 0 40px rgba(249,115,22,0.5), 0 0 80px rgba(249,115,22,0.6), 0 0 120px rgba(249,115,22,0.4)",
-                "0 0 80px rgba(249,115,22,0.8), 0 0 160px rgba(249,115,22,0.9), 0 0 220px rgba(249,115,22,0.6)",
-                "0 0 40px rgba(249,115,22,0.5), 0 0 80px rgba(249,115,22,0.6), 0 0 120px rgba(249,115,22,0.4)"
-              ]
-            }}
-            transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-            className="z-30 w-48 h-48 bg-gradient-to-br from-orange-600 to-orange-500 border-2 border-orange-300/40 rounded-full flex flex-col items-center justify-center text-white relative"
-          >
-            <div className="absolute inset-0 rounded-full bg-orange-400/20 blur-2xl" />
+    {/* CENTER CORE */}
+    <motion.div
+      animate={{ 
+        boxShadow: [
+          "0 0 40px rgba(249,115,22,0.5), 0 0 80px rgba(249,115,22,0.6), 0 0 120px rgba(249,115,22,0.4)",
+          "0 0 80px rgba(249,115,22,0.8), 0 0 160px rgba(249,115,22,0.9), 0 0 220px rgba(249,115,22,0.6)",
+          "0 0 40px rgba(249,115,22,0.5), 0 0 80px rgba(249,115,22,0.6), 0 0 120px rgba(249,115,22,0.4)"
+        ]
+      }}
+      transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+      className="z-30 w-48 h-48 bg-gradient-to-br from-orange-600 to-orange-500 border-2 border-orange-300/40 rounded-full flex flex-col items-center justify-center text-white relative"
+    >
+      <div className="absolute inset-0 rounded-full bg-orange-400/20 blur-2xl" />
+      <Zap className="text-white fill-white mb-2" size={44} />
+      <span className="font-black text-2xl text-center leading-none tracking-tighter">
+        PEST <br /> CONTROL
+      </span>
+      <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-transparent via-white/10 to-white/30 pointer-events-none" />
+    </motion.div>
 
-            <Zap className="text-white fill-white mb-2" size={44} />
-            <span className="font-black text-2xl text-center leading-none tracking-tighter">
-              PEST <br /> CONTROL
-            </span>
-
-            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-transparent via-white/10 to-white/30 pointer-events-none" />
-          </motion.div>
-
-          {/* ROTATING PLANETS */}
-          <motion.div
-            className="absolute w-[750px] h-[750px] rounded-full pointer-events-none"
-            animate={{ rotate: 360 }}
+    {/* ROTATING PLANETS CONTAINER */}
+    <motion.div
+      className="absolute w-[750px] h-[750px] rounded-full pointer-events-none"
+      animate={{ rotate: 360 }}
+      transition={{ repeat: Infinity, duration: 45, ease: "linear" }}
+    >
+      {items.map((item, i) => (
+        <div
+          key={i}
+          className="absolute top-1/2 left-1/2"
+          style={{
+            // Parent-level Positioning: Place items in a circle
+            transform: `translate(-50%, -50%) rotate(${item.angle}deg) translateY(-${radius}px)`
+          }}
+        >
+          <motion.div 
+            // 1. DYNAMIC COUNTER-ROTATION: Perfectly cancels parent animate {{ rotate: 360 }}
+            animate={{ rotate: -360 }}
             transition={{ repeat: Infinity, duration: 45, ease: "linear" }}
+            
+            // 2. STATIC COUNTER-ROTATION: Cancels the rotate(${item.angle}deg) from the positioning transform
+            style={{ rotate: -item.angle }}
+            
+            className="group pointer-events-auto"
           >
-            {items.map((item, i) => (
-              <div
-                key={i}
-                className="absolute top-1/2 left-1/2"
-                style={{
-                  transform: `translate(-50%, -50%) rotate(${item.angle}deg) translateY(-${radius}px)`
-                }}
-              >
-                <motion.div 
-                  animate={{ rotate: -360 }}
-                  transition={{ repeat: Infinity, duration: 45, ease: "linear" }}
-                  className="group pointer-events-auto"
-                >
-                  <div 
-                    className="
-                      relative w-32 h-32 
-                      bg-white/10 backdrop-blur-2xl 
-                      border border-white/30 rounded-full 
-                      flex items-center justify-center 
-                      transition-all duration-500 cursor-pointer
-                      hover:scale-110 hover:border-orange-400/50
-                      shadow-[0_0_30px_rgba(255,255,255,0.05)]
-                      hover:shadow-[0_0_40px_rgba(249,115,22,0.4)]
-                    "
-                  >
-                    <div className="absolute top-3 left-6 w-12 h-5 bg-white/20 rounded-full blur-md -rotate-45" />
-                    
-                    <span className="text-xs font-black text-white uppercase tracking-widest text-center px-3 select-none drop-shadow-md">
-                      {item.label}
-                    </span>
+            <div 
+              className="
+                relative w-32 h-32 
+                bg-white/10 backdrop-blur-2xl 
+                border border-white/30 rounded-full 
+                flex items-center justify-center 
+                transition-all duration-500 cursor-pointer
+                hover:scale-110 hover:border-orange-400/50
+                shadow-[0_0_30px_rgba(255,255,255,0.05)]
+                hover:shadow-[0_0_40px_rgba(249,115,22,0.4)]
+              "
+            >
+              <div className="absolute top-3 left-6 w-12 h-5 bg-white/20 rounded-full blur-md -rotate-45" />
+              
+              <span className="text-xs font-black text-white uppercase tracking-widest text-center px-3 select-none drop-shadow-md">
+                {item.label}
+              </span>
 
-                    <div className="absolute inset-0 rounded-full bg-orange-500/0 group-hover:bg-orange-500/10 transition-colors duration-500" />
-                  </div>
-                </motion.div>
-              </div>
-            ))}
+              <div className="absolute inset-0 rounded-full bg-orange-500/0 group-hover:bg-orange-500/10 transition-colors duration-500" />
+            </div>
           </motion.div>
-
         </div>
-      </div>
+      ))}
+    </motion.div>
 
+  </div>
+</div>
       {/* Bottom Vignette */}
       <div className="absolute bottom-0 w-full h-40 bg-gradient-to-t from-[#120804] to-transparent z-10" />
 </section>
+<section className="py-12 md:py-20 bg-[#f5d4aa] overflow-hidden">
+      <div className="flex flex-col gap-10">
 
-      <section className="py-12 md:py-20 bg-[#f5d4aa] overflow-hidden">
-  <div className="space-y-8">
+        {/* ROW 1: LEFT TO RIGHT */}
+        <div className="relative flex overflow-hidden">
+          {/* Tripling the array guarantees no gaps on ultra-wide screens */}
+          <div className="flex items-center gap-8 whitespace-nowrap animate-marquee-ltr">
+            {[...row1, ...row1, ...row1].map((logo, i) => (
+              <img
+                key={`row1-${i}`}
+                src={logo}
+                alt="client"
+                className="h-16 md:h-20 w-40 md:w-52 object-contain flex-shrink-0"
+              />
+            ))}
+          </div>
+        </div>
 
-{/* 🔥 ROW 1 */}
-<div className="relative overflow-hidden marquee py-4">
-  <div className="flex w-max items-center gap-16 marquee-track left">
-    {[...logos, ...logos].map((logo, i) => (
-      <img
-        key={i}
-        src={logo}
-        alt="client"
-        className="h-16 md:h-20 object-contain opacity-100 hover:scale-110 transition duration-300"
-      />
-    ))}
-  </div>
-</div>
+        {/* ROW 2: RIGHT TO LEFT */}
+        <div className="relative flex overflow-hidden">
+          <div className="flex items-center gap-12 whitespace-nowrap animate-marquee-rtl">
+            {[...row2, ...row2, ...row2].map((logo, i) => (
+              <img
+                key={`row2-${i}`}
+                src={logo}
+                alt="client"
+                className="h-16 md:h-20 w-40 md:w-52 object-contain flex-shrink-0"
+              />
+            ))}
+          </div>
+        </div>
 
-{/* 🔥 ROW 2 */}
-<div className="relative overflow-hidden marquee py-4">
-  <div className="flex w-max items-center gap-16 marquee-track right">
-    {[...logos, ...logos].map((logo, i) => (
-      <img
-        key={i}
-        src={logo}
-        alt="client"
-        className="h-16 md:h-20 object-contain opacity-100 hover:scale-110 transition duration-300"
-      />
-    ))}
-  </div>
-</div>
-
-  </div>
-</section>
-
+      </div>
+    </section>
         {/* TESTIMONIALS */}
         <section className="w-full py-8 md:py-15  text-center bg-[#bc8032] px-6">
   <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">

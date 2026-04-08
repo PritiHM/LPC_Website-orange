@@ -1,8 +1,8 @@
 @import "tailwindcss";
-body {
-  margin: 0;
-  padding: 0;
-}
+
+/* ============================= */
+/* 🌍 ROOT + BASE */
+/* ============================= */
 
 :root {
   --background: #ffffff;
@@ -24,31 +24,19 @@ body {
   }
 }
 
-/* 🔥 Marquee Animation */
-@keyframes marquee {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-marquee {
-  animation: marquee 25s linear infinite;
-}
-
-/* 💎 Optional: pause on hover */
-.animate-marquee:hover {
-  animation-play-state: paused;
-}
-
 /* Base styles */
 body {
+  margin: 0;
+  padding: 0;
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* ============================= */
+/* ✨ FADE ANIMATION */
+/* ============================= */
+
 @keyframes fade {
   0% { opacity: 0; transform: scale(0.95); }
   50% { opacity: 1; transform: scale(1); }
@@ -57,15 +45,16 @@ body {
 
 .animate-fade {
   animation: fade 3s ease-in-out infinite;
-}/* ============================= */
-/* 🔥 MARQUEE BASE */
+}
+
+/* ============================= */
+/* 🔥 MARQUEE (FINAL FIXED) */
 /* ============================= */
 
 .marquee {
   overflow: hidden;
   width: 100%;
   position: relative;
-  padding: 10px 0;
 }
 
 /* TRACK */
@@ -73,29 +62,25 @@ body {
   display: flex;
   width: max-content;
   align-items: center;
-  gap: 60px;
+  gap: 24px; /* ✅ FIXED GAP */
   will-change: transform;
 }
 
-/* ============================= */
-/* 🔥 LOGO STYLING */
-/* ============================= */
-
+/* LOGO */
 .marquee-track img {
-  height: 70px;              /* mobile */
+  height: 70px;
+  width: auto;
   object-fit: contain;
-  opacity: 1;               /* remove blur look */
-  filter: none;
-  image-rendering: auto;
-  transition: all 0.3s ease;
+  flex-shrink: 0; /* ✅ IMPORTANT */
+  transition: transform 0.3s ease;
 }
 
-/* HOVER EFFECT */
+/* HOVER */
 .marquee-track img:hover {
-  transform: scale(1.15);
+  transform: scale(1.1);
 }
 
-/* DESKTOP SIZE */
+/* DESKTOP */
 @media (min-width: 768px) {
   .marquee-track img {
     height: 90px;
@@ -103,41 +88,32 @@ body {
 }
 
 /* ============================= */
-/* 🔥 ANIMATIONS */
+/* 🔥 ANIMATION */
 /* ============================= */
 
-/* LEFT SCROLL */
+/* ROW 1 → LEFT ➝ RIGHT */
 .marquee-track.left {
-  animation: scrollLeft 25s linear infinite;
+  animation: scrollRight 18s linear infinite;
 }
 
-/* RIGHT SCROLL */
+/* ROW 2 → RIGHT ➝ LEFT */
 .marquee-track.right {
-  animation: scrollRight 25s linear infinite;
+  animation: scrollLeft 18s linear infinite;
 }
 
-/* KEYFRAMES */
-
+/* RIGHT ➝ LEFT */
 @keyframes scrollLeft {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
+/* LEFT ➝ RIGHT */
 @keyframes scrollRight {
-  0% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
 }
-
 /* ============================= */
-/* 🔥 OPTIONAL PREMIUM EFFECTS */
+/* 💎 PREMIUM EFFECTS */
 /* ============================= */
 
 /* hover pause */
@@ -145,7 +121,7 @@ body {
   animation-play-state: paused;
 }
 
-/* fade edges (optional use) */
+/* side fade */
 .marquee::before,
 .marquee::after {
   content: "";
@@ -164,4 +140,28 @@ body {
 .marquee::after {
   right: 0;
   background: linear-gradient(to left, #f5d4aa, transparent);
+}/* Smooth, Linear infinite scroll */
+@keyframes marquee-ltr {
+  0% { transform: translateX(-33.333%); }
+  100% { transform: translateX(0%); }
+}
+
+@keyframes marquee-rtl {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-33.333%); }
+}
+
+.animate-marquee-ltr {
+  /* Adjust 30s to change the speed (higher = slower) */
+  animation: marquee-ltr 30s linear infinite;
+}
+
+.animate-marquee-rtl {
+  animation: marquee-rtl 30s linear infinite;
+}
+
+/* Optional: Pause on hover if you want users to be able to look at a logo */
+.animate-marquee-ltr:hover, 
+.animate-marquee-rtl:hover {
+  animation-play-state: paused;
 }

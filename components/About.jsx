@@ -3,21 +3,29 @@ import React from "react";
 import Link from "next/link";
 
 const About = () => {
-  // Fixed Data Structure: Changed from an array to an object to match your JSX logic
   const leadership = {
-    director: {
-      name: "SHANKAR RAUT",
-      role: "Director",
-      image: "/images/director1.jpg",
-    },
-    executives: [
+    directors: [
+      {
+        name: "SANTOSH SHEWALE",
+        role: "Director",
+        image: "/images/SANTOSH SHEWALE.jpeg",
+      },
+      {
+        name: "SHANKAR RAUT",
+        role: "Director",
+        image: "/images/Shankar Raut.jpeg",
+      },
+    ],
+    employees: [
       {
         name: "AARTI SHEWALE",
         role: "Chief Executive Officer",
+        image: "/images/Aarti Shewale.jpeg",
       },
       {
         name: "VISHAL SASE",
         role: "Chief Technology Officer",
+        image: "/images/Vishal Sase.jpeg",
       },
     ],
   };
@@ -100,85 +108,110 @@ const About = () => {
           </div>
         </div>
       </section>
+<section className="py-24 px-6 lg:px-24 relative overflow-hidden">
+  <div className="max-w-7xl mx-auto">
+    
+    {/* Section Header */}
+    <div className="text-left mb-16">
+      <h2 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight text-white">
+        Our Leadership
+      </h2>
+      <div className="w-20 h-1.5 bg-orange-500 rounded-full shadow-[0_0_15px_rgba(249,115,22,0.3)]"></div>
+    </div>
 
-      {/* LEADERSHIP SECTION */}
-      <section className="py-20 px-6 lg:px-24 relative">
-        <div className="max-w-7xl mx-auto">
-          {/* Section Header */}
-          <div className="text-left mb-12">
-            <h2 className="text-4xl font-bold mb-4">Our Leadership</h2>
-            <div className="w-24 h-1 bg-[#ff9f1c] rounded-full"></div>
-          </div>
+    {/* Main Layout */}
+    <div className="grid lg:grid-cols-2 gap-16 items-center">
+      
+      {/* LEFT SIDE */}
+      <div className="space-y-10">
+        
+        {/* Directors */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          {leadership.directors.map((member, index) => (
+            <div
+              key={index}
+              className="relative group p-8 rounded-[2.5rem] bg-white/10 backdrop-blur-xl border border-white/20 shadow-[0_20px_60px_rgba(0,0,0,0.4)] transition-all duration-500 hover:scale-105 hover:border-orange-400/40 text-center overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-white/15 via-transparent to-transparent opacity-40 pointer-events-none"></div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-            {/* LEFT COLUMN (60% / 7-cols) */}
-            <div className="lg:col-span-7 flex flex-col gap-8">
-              
-              {/* DIRECTOR CARD (Highlighted Layout) */}
-              <div className="group relative p-8 md:p-10 rounded-3xl bg-[#2b1d0e]/30 backdrop-blur-xl border border-white/10 hover:border-[#ff9f1c]/50 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(255,159,28,0.15)] flex flex-col md:flex-row items-center gap-8">
-                <div className="relative shrink-0">
-                  <div className="absolute inset-0 bg-[#ff9f1c] blur-3xl opacity-20 group-hover:opacity-40 transition-opacity duration-500 rounded-full"></div>
-                  <img
-                    src={leadership.director.image}
-                    alt={leadership.director.name}
-                    className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-[#ff9f1c]/20 group-hover:border-[#ff9f1c] transition-colors duration-500 relative z-10"
-                  />
-                </div>
-                <div className="text-center md:text-left">
-                  <h4 className="text-2xl md:text-3xl font-bold text-white mb-2 tracking-wide">
-                    {leadership.director.name}
-                  </h4>
-                  <p className="text-[#ff9f1c] font-medium text-sm uppercase tracking-widest">
-                    {leadership.director.role}
-                  </p>
-                  <div className="mt-6 w-12 h-[2px] bg-white/10 group-hover:w-20 group-hover:bg-[#ff9f1c] transition-all duration-500"></div>
-                </div>
-              </div>
-
-              {/* CEO & CTO (Side-by-Side row) */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {leadership.executives.map((member, index) => (
-                  <div
-                    key={index}
-                    className="group relative p-8 rounded-3xl bg-[#2b1d0e]/30 backdrop-blur-xl border border-white/10 hover:border-[#ff9f1c]/30 transition-all duration-500 flex flex-col items-center text-center justify-center min-h-[160px]"
-                  >
-                    <h4 className="text-xl font-bold text-white mb-2 tracking-wide">
-                      {member.name}
-                    </h4>
-                    <p className="text-[#ff9f1c] font-medium text-xs uppercase tracking-widest">
-                      {member.role}
-                    </p>
-                    <div className="mt-4 w-10 h-[1px] bg-white/10 group-hover:w-16 group-hover:bg-[#ff9f1c] transition-all duration-500"></div>
-                  </div>
-                ))}
+              <div className="relative z-10 text-center">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-28 h-28 rounded-full mx-auto mb-6 object-cover object-[center_20%] border-4 border-orange-500/20 group-hover:border-orange-500/50 transition-all duration-500"
+                />
+                <h4 className="text-xl font-bold text-white mb-1">
+                  {member.name}
+                </h4>
+                <p className="text-orange-400 font-semibold text-sm uppercase tracking-widest">
+                  {member.role}
+                </p>
               </div>
             </div>
+          ))}
+        </div>
 
-            {/* RIGHT COLUMN (40% / 5-cols) - COMPANY INFO */}
-            <div className="lg:col-span-5">
-              <div className="h-full p-8 md:p-12 rounded-[2.5rem] bg-white/5 border border-white/10 backdrop-blur-md flex flex-col justify-center">
-                <div className="space-y-8">
-                  <div>
-                    <h3 className="text-[#ff9f1c] text-sm font-bold uppercase tracking-[0.2em] mb-4">The Visionary</h3>
-                    <p className="text-gray-200 text-lg leading-relaxed italic">
-                      "Shankar Raut leads LPC Facility with a mission to redefine pest management through 
-                      innovation and sustainable practices, ensuring safety and excellence for every client."
-                    </p>
-                  </div>
-                  <div className="pt-8 border-t border-white/10">
-                    <h3 className="text-white text-xl font-bold mb-4">Excellence in Facility Management</h3>
-                    <p className="text-gray-400 leading-relaxed text-sm">
-                      Our leadership team brings together decades of expertise in hygiene, safety, and operational 
-                      efficiency. We are dedicated to providing 24/7 responsiveness and high-quality solutions 
-                      across domestic and commercial sectors.
-                    </p>
-                  </div>
-                </div>
-              </div>
+        {/* Employees */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          {leadership.employees.map((member, index) => (
+            <div
+              key={index}
+              className="relative group p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 shadow-md transition-all duration-500 hover:bg-white/10 hover:border-orange-400/30 text-center"
+            >
+              <img
+                src={member.image}
+                alt={member.name}
+                className="w-20 h-20 rounded-full mx-auto mb-3 object-cover object-[center_20%] border-2 border-white/10 group-hover:border-orange-500/40 transition-all"
+              />
+              <h4 className="text-base font-semibold text-white/90">
+                {member.name}
+              </h4>
+              <p className="text-orange-400/80 text-xs uppercase font-bold tracking-wide">
+                {member.role}
+              </p>
             </div>
+          ))}
+        </div>
+      </div>
+
+      {/* RIGHT SIDE */}
+      <div className="flex flex-col justify-center space-y-8">
+        <div className="space-y-4">
+          <h3 className="text-3xl font-bold text-orange-400 tracking-tight">
+            Leadership Vision
+          </h3>
+          <p className="text-white/80 text-lg leading-relaxed font-light">
+            Our directors bring years of expertise in facility management, 
+            delivering high-quality services with innovation and reliability. 
+            We are committed to setting new benchmarks in premium flooring 
+            and design solutions.
+          </p>
+        </div>
+
+        <div className="space-y-4">
+          <h3 className="text-3xl font-bold text-orange-400 tracking-tight">
+            Our Team Strength
+          </h3>
+          <p className="text-white/80 text-lg leading-relaxed font-light">
+            Behind every successful project is our skilled workforce. Our team 
+            ensures smooth execution, meticulous quality service delivery, 
+            and absolute customer satisfaction across all specialized segments.
+          </p>
+        </div>
+
+        <div className="pt-4">
+          <div className="inline-flex items-center gap-3">
+            <span className="h-px w-12 bg-orange-500/50"></span>
+            <span className="text-xs uppercase tracking-[0.3em] text-white/40 font-bold">
+              Excellence in every detail
+            </span>
           </div>
         </div>
-      </section>
+      </div>
+
+    </div>
+  </div>
+</section>
     </main>
   );
 };
