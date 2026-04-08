@@ -8,7 +8,7 @@ const ServicesSection = () => {
   const [selectedResidential, setSelectedResidential] = useState(null);
   const [openCommercial, setOpenCommercial] = useState(null);
 
-  const whatsappNumber = "919876543210"; 
+  const whatsappNumber = "917506102007"; 
 
   const services = [
     {
