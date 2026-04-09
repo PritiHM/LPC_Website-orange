@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import "../app/globals.css"
 import { motion } from "framer-motion";
@@ -28,16 +29,24 @@ const GlassCard = ({ children, className = "" }) => (
   </motion.div>
 );
 
-const logos = [
-    "/images/logo_page_1.png", "/images/logo_page_2.png", "/images/logo_page_3.png", 
-    "/images/logo_page_12.png", "/images/logo_page_5.png", "/images/logo_page_6.png",
-    "/images/logo_page_7.png", "/images/logo_page_8.png", "/images/logo_page_9.png", 
-    "/images/logo_page_10.png", "/images/logo_page_11.png", "/images/logo_page_12.png"
-  ];
 
-  // Slice the logos into two groups of 6
-  const row1 = logos.slice(0, 6);
-  const row2 = logos.slice(6, 12);
+  const logos = [
+  { src: "/images/logo_page_1.png", type: "wide" },     // K2P
+  { src: "/images/logo_page_2.png", type: "normal" },   // Mahindra
+  { src: "/images/logo_page_3.png", type: "tall" },     // JioMart
+  { src: "/images/logo_page_12.png", type: "circle" },  // Smart Bazaar
+  { src: "/images/logo_page_5.png", type: "normal" },   // Reliance Digital
+  { src: "/images/logo_page_6.png", type: "wide" },     // Jewels
+
+  { src: "/images/logo_page_7.png", type: "normal" },   // Fashion
+  { src: "/images/logo_page_8.png", type: "circle" },   // Fresh
+  { src: "/images/logo_page_9.png", type: "small" },    // Vision
+  { src: "/images/logo_page_10.png", type: "small" },   // Smart Point
+  { src: "/images/logo_page_11.png", type: "wide" },    // Raymond
+  { src: "/images/logo_page_12.png", type: "circle" }   // duplicate check
+];
+const row1 = logos.slice(0, 6);
+const row2 = logos.slice(6, 12);
 
 const Hero = () => {
   const items = [
@@ -50,28 +59,31 @@ const Hero = () => {
 
 const radius = 375 - 80;
   const services = [
-    {
-      title: "Pest Control",
-      desc: "Effective pest elimination with advanced techniques.",
-      img: "/images/pest control.webp",
-    },
-    {
-      title: "Carpet Cleaning",
-      desc: "Deep cleaning for stain-free and hygienic carpets.",
-      img: "/images/carpet-cleaning.jpg",
-    },
-    {
-      title: "Marble Polishing",
-      desc: "Restore shine with premium polishing solutions.",
-      img: "/images/marbel-polishing.jpg",
-    },
-    {
-      title: "Carpet & Rubber Flooring",
-      desc: "Innovative Carpet, Wooden & Rubber Flooring – Designed, Supplied & Installed to Perfection.",
-      img: "/images/carpet-flooring.jpg",
-    },
-  ];
-
+  {
+    title: "Pest Control",
+    desc: "Effective pest elimination with advanced techniques.",
+    img: "/images/pest control.webp",
+    link: "/services"
+  },
+  {
+    title: "Carpet Cleaning",
+    desc: "Deep cleaning for stain-free and hygienic carpets.",
+    img: "/images/carpet-cleaning.jpg",
+    link: "/FacilityManagement"
+  },
+  {
+    title: "Marble Polishing",
+    desc: "Restore shine with premium polishing solutions.",
+    img: "/images/marbel-polishing.jpg",
+    link: "/FacilityManagement"
+  },
+  {
+    title: "Carpet & Rubber Flooring",
+    desc: "Innovative Carpet, Wooden & Rubber Flooring – Designed, Supplied & Installed to Perfection.",
+    img: "/images/carpet-flooring.jpg",
+    link: "/carpet-flooring"
+  },
+];
   const testimonials = [
     {
       name: "John Doe",
@@ -148,9 +160,15 @@ const radius = 375 - 80;
               <p className="text-base md:text-lg text-blue-100 mb-8">
                 Premium facility management solutions
               </p>
-              <button className="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 px-8 py-3 rounded-xl font-bold transition">
-                Get Started
-              </button>
+              <a
+  href="https://wa.me/917506102007?text=Hello%20I%20am%20interested%20in%20your%20services.%20Please%20contact%20me."
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <button className="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 px-8 py-3 rounded-xl font-bold transition">
+    Get Started
+  </button>
+</a>
             </div>
           </div>
 
@@ -208,62 +226,69 @@ const radius = 375 - 80;
 
     {/* 🔥 CARDS GRID - Exact Screenshot Glass Effect */}
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-10">
-      {services.slice(0, 3).map((service, i) => (
-        <div
-          key={i}
-          className="bg-white/30 backdrop-blur-[12px] border border-white/40 rounded-[2.5rem] p-8 text-center 
-                     shadow-[0_20px_50px_rgba(0,0,0,0.1)] 
-                     hover:shadow-[0_25px_60px_rgba(0,0,0,0.15)] 
-                     transition-all duration-500 ease-out group"
-        >
-          {/* Image Container with specific padding like screenshot */}
-          <div className="overflow-hidden rounded-2xl mb-8 shadow-sm">
-            <img
-              src={service.img}
-              alt={service.title}
-              className="w-full h-44 object-cover transform group-hover:scale-105 transition-transform duration-500"
-            />
-          </div>
+     {services.slice(0, 3).map((service, i) => (
+  <Link href={service.link} key={i}>
+    <div className="group cursor-pointer bg-white/30 backdrop-blur-[12px] border border-white/40 rounded-[2.5rem] p-8 text-center 
+                    shadow-[0_20px_50px_rgba(0,0,0,0.1)] 
+                    hover:shadow-[0_25px_60px_rgba(0,0,0,0.15)] 
+                    transition-all duration-500 ease-out">
 
-          <h3 className="text-2xl font-bold text-[#2d1b0d] mb-3">
-            {service.title}
-          </h3>
+      <div className="overflow-hidden rounded-2xl mb-8 shadow-sm">
+        <img
+          src={service.img}
+          alt={service.title}
+          className="w-full h-44 object-cover transform group-hover:scale-105 transition-transform duration-500"
+        />
+      </div>
 
-          <p className="text-[#4a3728] text-[15px] leading-relaxed">
-            {service.desc}
-          </p>
-        </div>
-      ))}
+      <h3 className="text-2xl font-bold text-[#2d1b0d] mb-3">
+        {service.title}
+      </h3>
+
+      <p className="text-[#4a3728] text-[15px] leading-relaxed">
+        {service.desc}
+      </p>
+
+    </div>
+  </Link>
+))}
     </div>
 
     {/* 🔥 BIG CENTER CARD */}
-    <div className="flex justify-center">
-      {services.slice(3, 4).map((service, i) => (
-        <div
-          key={i}
-          className="bg-white/30 backdrop-blur-[12px] border border-white/40 rounded-[3rem] p-8 md:p-10 text-center 
-                     w-full md:w-[75%] shadow-[0_20px_50px_rgba(0,0,0,0.1)] 
-                     hover:shadow-[0_25px_60px_rgba(0,0,0,0.15)] 
-                     transition-all duration-500 group"
-        >
-          <div className="overflow-hidden rounded-3xl mb-8 shadow-sm">
-            <img
-              src={service.img}
-              alt={service.title}
-              className="w-full h-56 md:h-72 object-cover transform group-hover:scale-105 transition-transform duration-500"
-            />
-          </div>
+   <div className="flex justify-center">
+  {services.slice(3, 4).map((service, i) => (
+    <Link
+      href={service.link}
+      key={i}
+      className="block w-full md:w-[75%]"
+    >
+      <div className="group cursor-pointer bg-white/30 backdrop-blur-[12px] border border-white/40 rounded-[3rem] p-8 md:p-10 text-center 
+                      w-full shadow-[0_20px_50px_rgba(0,0,0,0.1)] 
+                      hover:shadow-[0_25px_60px_rgba(0,0,0,0.15)] 
+                      transition-all duration-500">
 
-          <h3 className="text-3xl font-bold text-[#2d1b0d] mb-4">
-            {service.title}
-          </h3>
-
-          <p className="text-[#4a3728] text-lg max-w-2xl mx-auto leading-relaxed">
-            {service.desc}
-          </p>
+        <div className="overflow-hidden rounded-3xl mb-8 shadow-sm">
+          <img
+            src={service.img}
+            alt={service.title}
+            className="w-full h-56 md:h-72 object-cover transform group-hover:scale-105 transition-transform duration-500"
+          />
         </div>
-      ))}
-    </div>
+
+        <h3 className="text-3xl font-bold text-[#2d1b0d] mb-4">
+          {service.title}
+        </h3>
+
+        <p className="text-[#4a3728] text-lg max-w-2xl mx-auto leading-relaxed">
+          {service.desc}
+        </p>
+
+      </div>
+    </Link>
+  ))}
+</div>
+
+        
   </div>
 </section>
 <section className="relative min-h-screen py-3 md:py-10 w-full flex flex-col items-center justify-center overflow-hidden bg-[#1a0f08]">
@@ -346,88 +371,109 @@ const radius = 375 - 80;
     </motion.div>
 
     {/* ROTATING PLANETS CONTAINER */}
-    <motion.div
-      className="absolute w-[750px] h-[750px] rounded-full pointer-events-none"
-      animate={{ rotate: 360 }}
-      transition={{ repeat: Infinity, duration: 45, ease: "linear" }}
+    {/* ROTATING PLANETS CONTAINER */}
+<motion.div
+  className="absolute w-[750px] h-[750px] rounded-full pointer-events-none"
+  animate={{ rotate: 360 }}
+  transition={{ repeat: Infinity, duration: 45, ease: "linear" }}
+>
+  {items.map((item, i) => (
+    <div
+      key={i}
+      className="absolute top-1/2 left-1/2"
+      style={{
+        // 1. POSITIONING: Rotate to the specific angle and move outward by radius
+        transform: `translate(-50%, -50%) rotate(${item.angle}deg) translateY(-${radius}px)`
+      }}
     >
-      {items.map((item, i) => (
-        <div
-          key={i}
-          className="absolute top-1/2 left-1/2"
-          style={{
-            // Parent-level Positioning: Place items in a circle
-            transform: `translate(-50%, -50%) rotate(${item.angle}deg) translateY(-${radius}px)`
-          }}
+      <motion.div 
+        // 2. DYNAMIC COUNTER-ROTATION: 
+        // We animate -360 to perfectly cancel the parent's +360 rotation in real-time.
+        animate={{ rotate: -360 }}
+        transition={{ repeat: Infinity, duration: 45, ease: "linear" }}
+        
+        // 3. STATIC COUNTER-ROTATION: 
+        // We wrap the content in another div to cancel the item.angle positioning.
+        className="group pointer-events-auto"
+      >
+        <div 
+          style={{ transform: `rotate(-${item.angle}deg)` }} // Cancels the initial angle offset
+          className="
+            relative w-32 h-32 
+            bg-white/10 backdrop-blur-2xl 
+            border border-white/30 rounded-full 
+            flex items-center justify-center 
+            transition-all duration-500 cursor-pointer
+            hover:scale-110 hover:border-orange-400/50
+            shadow-[0_0_30px_rgba(255,255,255,0.05)]
+            hover:shadow-[0_0_40px_rgba(249,115,22,0.4)]
+          "
         >
-          <motion.div 
-            // 1. DYNAMIC COUNTER-ROTATION: Perfectly cancels parent animate {{ rotate: 360 }}
-            animate={{ rotate: -360 }}
-            transition={{ repeat: Infinity, duration: 45, ease: "linear" }}
-            
-            // 2. STATIC COUNTER-ROTATION: Cancels the rotate(${item.angle}deg) from the positioning transform
-            style={{ rotate: -item.angle }}
-            
-            className="group pointer-events-auto"
-          >
-            <div 
-              className="
-                relative w-32 h-32 
-                bg-white/10 backdrop-blur-2xl 
-                border border-white/30 rounded-full 
-                flex items-center justify-center 
-                transition-all duration-500 cursor-pointer
-                hover:scale-110 hover:border-orange-400/50
-                shadow-[0_0_30px_rgba(255,255,255,0.05)]
-                hover:shadow-[0_0_40px_rgba(249,115,22,0.4)]
-              "
-            >
-              <div className="absolute top-3 left-6 w-12 h-5 bg-white/20 rounded-full blur-md -rotate-45" />
-              
-              <span className="text-xs font-black text-white uppercase tracking-widest text-center px-3 select-none drop-shadow-md">
-                {item.label}
-              </span>
+          {/* VISUAL SHINE */}
+          <div className="absolute top-3 left-6 w-12 h-5 bg-white/20 rounded-full blur-md -rotate-45" />
+          
+          {/* UPRIGHT TEXT */}
+          <span className="text-xs font-black text-white uppercase tracking-widest text-center px-3 select-none drop-shadow-md">
+            {item.label}
+          </span>
 
-              <div className="absolute inset-0 rounded-full bg-orange-500/0 group-hover:bg-orange-500/10 transition-colors duration-500" />
-            </div>
-          </motion.div>
+          {/* HOVER GLOW */}
+          <div className="absolute inset-0 rounded-full bg-orange-500/0 group-hover:bg-orange-500/10 transition-colors duration-500" />
         </div>
-      ))}
-    </motion.div>
+      </motion.div>
+    </div>
+  ))}
+</motion.div>
 
   </div>
 </div>
       {/* Bottom Vignette */}
       <div className="absolute bottom-0 w-full h-40 bg-gradient-to-t from-[#120804] to-transparent z-10" />
 </section>
-<section className="py-12 md:py-20 bg-[#f5d4aa] overflow-hidden">
-      <div className="flex flex-col gap-10">
+ {/* logos section */}
+<section className="py-12 md:py-20 bg-[#fbf5e9] overflow-hidden">
+      <div className="flex flex-col gap-6 md:gap-8">
 
         {/* ROW 1: LEFT TO RIGHT */}
         <div className="relative flex overflow-hidden">
-          {/* Tripling the array guarantees no gaps on ultra-wide screens */}
-          <div className="flex items-center gap-8 whitespace-nowrap animate-marquee-ltr">
+          <div className="flex items-center gap-4 md:gap-6 whitespace-nowrap animate-marquee-ltr">
             {[...row1, ...row1, ...row1].map((logo, i) => (
-              <img
+              <div 
                 key={`row1-${i}`}
-                src={logo}
-                alt="client"
-                className="h-16 md:h-20 w-40 md:w-52 object-contain flex-shrink-0"
-              />
+                className="relative flex items-center justify-center bg-white rounded-xl md:rounded-2xl shadow-sm border border-white/50 w-36 h-20 md:w-[230px] md:h-[120px] flex-shrink-0 overflow-hidden"
+              >
+               <img
+  src={logo.src}
+  alt="client logo"
+  className="
+    object-contain p-3
+    h-[90px] md:h-[120px]
+    w-auto
+  "
+/>
+              </div>
             ))}
           </div>
         </div>
 
         {/* ROW 2: RIGHT TO LEFT */}
         <div className="relative flex overflow-hidden">
-          <div className="flex items-center gap-12 whitespace-nowrap animate-marquee-rtl">
+          <div className="flex items-center gap-4 md:gap-6 whitespace-nowrap animate-marquee-rtl">
             {[...row2, ...row2, ...row2].map((logo, i) => (
-              <img
+              <div 
                 key={`row2-${i}`}
-                src={logo}
-                alt="client"
-                className="h-16 md:h-20 w-40 md:w-52 object-contain flex-shrink-0"
-              />
+                className="relative flex items-center justify-center bg-white rounded-xl md:rounded-2xl shadow-sm border border-white/50 w-36 h-20 md:w-[230px] md:h-[120px] flex-shrink-0 overflow-hidden"
+              >
+              <img
+  src={logo.src}
+  alt="client logo"
+  className="
+    object-contain p-3
+    h-[90px] md:h-[120px]
+    w-auto
+  "
+/>
+              </div>
             ))}
           </div>
         </div>

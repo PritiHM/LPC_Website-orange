@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
@@ -56,9 +56,13 @@ export default function Navbar() {
 
         {/* RIGHT SIDE */}
         <div className="flex items-center gap-3">
-          <button className="hidden md:block bg-orange-400 hover:bg-orange-500 transition text-black px-3 py-1 rounded-full text-sm font-semibold">
-            Get Quote
-          </button>
+          
+
+<Link href="/contactus">
+  <button className="hidden md:block bg-orange-400 hover:bg-orange-500 transition text-black px-3 py-1 rounded-full text-sm font-semibold">
+    Get Quote
+  </button>
+</Link>
 
           <button
             className="md:hidden text-xl"
