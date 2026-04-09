@@ -446,10 +446,10 @@ const radius = 375 - 80;
   src={logo.src}
   alt="client logo"
   className="
-    object-contain p-3
-    h-[90px] md:h-[120px]
-    w-auto
-  "
+  object-contain
+  w-full h-full
+  p-4 md:p-6
+"
 />
               </div>
             ))}

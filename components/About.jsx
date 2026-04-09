@@ -130,16 +130,16 @@ const About = () => {
           {leadership.directors.map((member, index) => (
             <div
               key={index}
-              className="relative group p-8 rounded-[2.5rem] bg-white/10 backdrop-blur-xl border border-white/20 shadow-[0_20px_60px_rgba(0,0,0,0.4)] transition-all duration-500 hover:scale-105 hover:border-orange-400/40 text-center overflow-hidden"
+              className="relative group p-10 rounded-[2.5rem] bg-white/10 backdrop-blur-xl border border-white/20 shadow-[0_20px_60px_rgba(0,0,0,0.4)] transition-all duration-500 hover:scale-105 hover:border-orange-400/40 text-center overflow-hidden"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-white/15 via-transparent to-transparent opacity-40 pointer-events-none"></div>
 
               <div className="relative z-10 text-center">
                 <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-28 h-28 rounded-full mx-auto mb-6 object-cover object-[center_20%] border-4 border-orange-500/20 group-hover:border-orange-500/50 transition-all duration-500"
-                />
+  src={member.image}
+  alt={member.name}
+  className="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-8 object-cover object-top border-[5px] border-orange-500/20 group-hover:border-orange-500/60 group-hover:shadow-[0_0_20px_rgba(249,115,22,0.4)] transition-all duration-500"
+/>
                 <h4 className="text-xl font-bold text-white mb-1">
                   {member.name}
                 </h4>
