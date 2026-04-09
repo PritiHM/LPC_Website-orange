@@ -78,7 +78,7 @@ const ServicesSection = () => {
               Protect your home and business with advanced pest management solutions.
             </p>
 
-            <Link href="/pestcontrol">
+            <Link href="/contactus">
               <button className="bg-[#ff9f1c] text-[#1a120b] px-6 py-3 rounded-xl font-semibold shadow-lg hover:scale-105 transition">
                 Get Service
               </button>
