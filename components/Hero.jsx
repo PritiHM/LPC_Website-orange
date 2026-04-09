@@ -259,30 +259,42 @@ const Hero = () => {
           </div>
           <div className="absolute bottom-0 w-full h-40 bg-gradient-to-t from-[#120804] to-transparent z-10" />
         </section>
-
-        {/* --- LOGOS SECTION --- */}
-        <section className="py-12 md:py-20 bg-[#fbf5e9] overflow-hidden">
-          <div className="flex flex-col gap-6 md:gap-8">
-            <div className="relative flex overflow-hidden">
-              <div className="flex items-center gap-4 md:gap-6 whitespace-nowrap animate-marquee-ltr">
-                {[...row1, ...row1, ...row1].map((logo, i) => (
-                  <div key={`row1-${i}`} className="relative flex items-center justify-center bg-white rounded-xl md:rounded-2xl shadow-sm border border-white/50 w-36 h-20 md:w-[230px] md:h-[120px] flex-shrink-0 overflow-hidden">
-                    <img src={logo.src} alt="client logo" className="object-contain w-full h-full p-4 md:p-6" />
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="relative flex overflow-hidden">
-              <div className="flex items-center gap-4 md:gap-6 whitespace-nowrap animate-marquee-rtl">
-                {[...row2, ...row2, ...row2].map((logo, i) => (
-                  <div key={`row2-${i}`} className="relative flex items-center justify-center bg-white rounded-xl md:rounded-2xl shadow-sm border border-white/50 w-36 h-20 md:w-[230px] md:h-[120px] flex-shrink-0 overflow-hidden">
-                    <img src={logo.src} alt="client logo" className="object-contain p-3 h-[90px] md:h-[120px] w-auto" />
-                  </div>
-                ))}
-              </div>
-            </div>
+{/* --- LOGOS SECTION --- */}
+<section className="py-12 md:py-20 bg-[#fbf5e9] overflow-hidden">
+  <div className="flex flex-col gap-6 md:gap-8">
+    
+    {/* Row 1 */}
+    <div className="relative flex overflow-hidden">
+      <div className="flex items-center gap-4 md:gap-6 whitespace-nowrap animate-marquee-ltr">
+        {[...row1, ...row1, ...row1].map((logo, i) => (
+          <div key={`row1-${i}`} className="relative flex items-center justify-center bg-white rounded-xl md:rounded-2xl shadow-sm border border-white/50 w-36 h-20 md:w-[230px] md:h-[120px] flex-shrink-0 overflow-hidden">
+            <img 
+              src={logo.src} 
+              alt="client logo" 
+              className="object-contain w-full h-full p-0 scale-110 md:scale-125" 
+            />
           </div>
-        </section>
+        ))}
+      </div>
+    </div>
+
+    {/* Row 2 */}
+    <div className="relative flex overflow-hidden">
+      <div className="flex items-center gap-4 md:gap-6 whitespace-nowrap animate-marquee-rtl">
+        {[...row2, ...row2, ...row2].map((logo, i) => (
+          <div key={`row2-${i}`} className="relative flex items-center justify-center bg-white rounded-xl md:rounded-2xl shadow-sm border border-white/50 w-36 h-20 md:w-[230px] md:h-[120px] flex-shrink-0 overflow-hidden">
+            <img 
+              src={logo.src} 
+              alt="client logo" 
+              className="object-contain w-full h-full p-0 scale-110 md:scale-125" 
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+
+  </div>
+</section>
 
         {/* --- TESTIMONIALS SECTION --- */}
         <section className="w-full py-8 md:py-15 text-center bg-[#bc8032] px-6">
