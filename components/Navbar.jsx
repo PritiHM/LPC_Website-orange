@@ -85,9 +85,11 @@ export default function Navbar() {
             <a href="/project" className="block text-center hover:text-orange-400">Projects</a>
             <a href="/contactus" className="block text-center hover:text-orange-400">Contact Us</a>
 
-            <button className="w-full mt-2 bg-orange-400 hover:bg-orange-500 text-black px-3 py-2 rounded-full text-sm font-semibold">
-              Get Quote
-            </button>
+           <Link href="/contactus">
+  <button className="hidden md:block bg-orange-400 hover:bg-orange-500 transition text-black px-3 py-1 rounded-full text-sm font-semibold">
+    Get Quote
+  </button>
+</Link>
 
           </div>
         </div>
