@@ -86,9 +86,8 @@ const ServicesSection = () => {
           </div>
         </div>
       </section>
-
-      {/* --- SERVICES SECTION --- */}
-    {/* --- ADVANCED SCI-FI GLASS ANIMATIONS --- */}
+{/* --- SERVICES SECTION --- */}
+{/* --- ADVANCED SCI-FI GLASS ANIMATIONS --- */}
 <style dangerouslySetInnerHTML={{ __html: `
   @keyframes sci-fi-shine {
     0% { transform: translateX(-200%) skewX(-30deg); opacity: 0; }
@@ -150,11 +149,11 @@ const ServicesSection = () => {
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-[2px] bg-gradient-to-r from-transparent via-white to-transparent shadow-[0_0_15px_rgba(255,255,255,0.8)] opacity-90"></div>
             <div className="absolute -top-1 -left-1 w-12 h-12 bg-white/20 blur-xl rounded-full"></div>
             <div className="absolute -bottom-1 -right-1 w-12 h-12 bg-blue-400/10 blur-xl rounded-full"></div>
-            <div className="absolute top-0 bottom-0 w-64 bg-gradient-to-r from-transparent via-white/[0.15] to-transparent -translate-x-[200%] skew-x-[-30deg] group-hover:animate-sci-fi-shine"></div>
+            {/* UPDATED CLASS BELOW: Animate always on mobile, only on group-hover for desktop */}
+            <div className="absolute top-0 bottom-0 w-64 bg-gradient-to-r from-transparent via-white/[0.15] to-transparent -translate-x-[200%] skew-x-[-30deg] animate-sci-fi-shine md:animate-none md:group-hover:animate-sci-fi-shine"></div>
           </div>
 
           {/* --- IMAGES SIDE --- */}
-          {/* Added lg:order-last on odd indexes to create zig-zag */}
           <div className={`flex flex-col gap-5 relative z-10 ${isReversed ? 'lg:order-last' : 'lg:order-first'}`}>
             <div className="h-[300px] rounded-3xl overflow-hidden border border-white/20 shadow-[0_0_30px_rgba(0,0,0,0.5)]">
               <img 
