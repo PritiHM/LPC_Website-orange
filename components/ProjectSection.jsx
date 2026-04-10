@@ -22,29 +22,37 @@ const getSpanClass = (index) => {
 const ProjectSection = () => {
   const projects = [
     { title: "Commercial Pest Control", image: "/images/Corporate.png" },
-    { title: "Commercial Kitchen Cleaning", image: "/images/Hotel Kitchen.png" },
-    { title: "Commercial Office Maintenance", image: "/images/Offices.png" },
-    { title: "Commercial Sanitization", image: "/images/Corporate 1.png" },
-    { title: "Commercial Deep Cleaning", image: "/images/project1.png" },
+        { title: "Commercial Kitchen Cleaning", image: "/images/Hotel Kitchen.png" },
+            { title: "Commercial Office Maintenance", image: "/images/Offices.png" },
+                { title: "Commercial Pest Control", image: "/images/commercial-3.png" },
+                    { title: "Commercial Deep Cleaning", image: "/images/project1.png" },
     { title: "Commercial Hospitality Service", image: "/images/project2.png" },
     { title: "Commercial Pest Control", image: "/images/commercial-1.png" },
     { title: "Commercial Pest Control", image: "/images/commercial-2.png" },
-    { title: "Commercial Pest Control", image: "/images/commercial-3.png" },
-    { title: "Commercial Pest Control", image: "/images/commercial-4.png" },
-    { title: "Residential Pest Control", image: "/images/resi.jpg" },
+        { title: "Commercial Sanitization", image: "/images/Corporate 1.png" },
+            { title: "Commercial Pest Control", image: "/images/commercial-3.png" },
     { title: "Residential Kitchen Cleaning", image: "/images/Kitchen.png" },
-    { title: "Industrial Pest Control", image: "/images/Pest.jpg" },
     { title: "Industrial Guest Room Sanitization", image: "/images/Hotel Kitchen.png" },
     { title: "Industrial Drainage Treatment", image: "/images/industrial-1.png" },
-    { title: "Industrial Deep Cleaning", image: "/images/industrial-2.png" },
     { title: "Industrial Maintenance", image: "/images/industrial-3.png" },
-    { title: "Industrial Pest Control", image: "/images/industrial-4.png" },
-    { title: "Industrial Pest Control", image: "/images/industrial-5.png" },
-    { title: "Industrial Pest Control", image: "/images/industrial-6.png" },
-    { title: "Industrial Pest Control", image: "/images/industrial-5.png" },
-    { title: "Industrial Pest Control", image: "/images/industrial-6.png" },
-    { title: "Industrial Pest Control", image: "/images/Res.jpg" },
-    { title: "Industrial Pest Control", image: "/images/resi.jpg" },
+        { title: "Commercial Pest Control", image: "/images/commercial-4.png" },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
   ];
 
   return (
