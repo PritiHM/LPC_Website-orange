@@ -36,6 +36,14 @@ const ProjectSection = () => {
     { title: "Industrial Drainage Treatment", image: "/images/industrial-1.png" },
     { title: "Industrial Maintenance", image: "/images/industrial-3.png" },
         { title: "Commercial Pest Control", image: "/images/commercial-4.png" },
+    { title: "Industrial Pest Control", image: "/images/industrial-6.png" },
+        { title: "Industrial Pest Control", image: "/images/industrial-6.png" },
+    { title: "Industrial Pest Control", image: "/images/industrial-5.png" },
+        { title: "Industrial Deep Cleaning", image: "/images/industrial-2.png" },
+
+
+
+
 
 
 
