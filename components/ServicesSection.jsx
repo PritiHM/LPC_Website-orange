@@ -16,9 +16,9 @@ const ServicesSection = () => {
       title: "Professional Mosquito Control",
       desc1: "Mosquitoes are among the most dangerous pests, spreading harmful diseases like malaria, dengue, and chikungunya. Our specialized treatment eliminates mosquitoes from indoor and outdoor spaces while targeting breeding zones and stagnant water.",
       desc2: "Our advanced process includes fogging, spraying, and larva control using eco-friendly treatments (Bti and methoprene). We target the life cycle from dormant eggs to larvae before they pupate to ensure long-lasting protection for your premises.",
-      mainImg: "/images/mosquitos1.png",
-      subImg1: "/images/mosquitos2.png",
-      subImg2: "/images/mosquitos3.png",
+      mainImg: "/images/m1.jpg",
+      subImg1: "/images/m2.jpg",
+      subImg2: "/images/m3.jpg",
       reverse: false,
     },
     {
@@ -26,9 +26,9 @@ const ServicesSection = () => {
       title: "Rodent (Mouse) Control",
       desc1: "Rats and mice cause serious property damage by chewing electrical wires, furniture, and food packaging. They carry harmful bacteria and diseases, making timely professional intervention essential for a hygienic environment.",
       desc2: "Our trained professionals use advanced trapping, baiting, and sealing methods to identify infestation points and prevent future entry. We provide reliable results for homes, warehouses, restaurants, and industrial spaces.",
-      mainImg: "/images/rodent1.png",
-      subImg1: "/images/rodent2.png",
-      subImg2: "/images/rodent3.png",
+      mainImg: "/images/r1.jpg",
+      subImg1: "/images/r2.jpg",
+      subImg2: "/images/r3.jpg",
       reverse: true,
     },
     {
@@ -36,9 +36,9 @@ const ServicesSection = () => {
       title: "Termite Pest Control",
       desc1: "Termites are silent destroyers that damage wooden furniture, flooring, and building foundations without visible signs. Our specialized anti-termite treatment helps detect and eliminate these pests before they cause structural failure.",
       desc2: "We provide both pre-construction and post-construction termite protection. Our experts use advanced soil and wood treatment methods to ensure complete colony eradication and long-term peace of mind for your property.",
-      mainImg: "/images/termite1.png",
-      subImg1: "/images/termite2.png",
-      subImg2: "/images/termite3.png",
+      mainImg: "/images/t1.png",
+      subImg1: "/images/t2.png",
+      subImg2: "/images/t3.png",
       reverse: false,
     },
     {
@@ -46,9 +46,9 @@ const ServicesSection = () => {
       title: "Bed Bug Pest Control",
       desc1: "Bed bugs hide in mattresses, sofas, and furniture joints, causing skin irritation and sleepless nights. Timely treatment is essential to protect homes, hotels, and commercial spaces from these persistent blood-feeding pests.",
       desc2: "Our specialized services include deep detection, heat treatment, mattress treatment, and residual spraying. We eliminate hidden infestations completely and use safe methods to prevent them from returning to your environment.",
-      mainImg: "/images/bedbug1.png",
-      subImg1: "/images/bedbug2.png",
-      subImg2: "/images/bedbug3.png",
+      mainImg: "/images/b1.png",
+      subImg1: "/images/b2.png",
+      subImg2: "/images/b3.png",
       reverse: true,
     },
     {
@@ -56,9 +56,9 @@ const ServicesSection = () => {
   title: "Professional Cockroach Treatment",
   desc1: "Protect your home and workplace with our expert cockroach pest control services in Thane. We provide reliable and effective cockroach treatment solutions for homes, offices, hotels, hostels, restaurants, and commercial spaces.",
   desc2: "Our cockroach control services include gel bait treatment, anti-cockroach spray, residual pest control, and kitchen & drainage area treatment. We perform thorough inspection, targeted treatment, and preventive measures to ensure long-lasting protection. Get fast response, trained technicians, and guaranteed results for a clean, hygienic, and pest-free environment.",
-  mainImg: "/images/cockroach1.png",
-  subImg1: "/images/cockroach2.png",
-  subImg2: "/images/cockroach3.png",
+  mainImg: "/images/c1.png",
+  subImg1: "/images/c2.png",
+  subImg2: "/images/c3.png",
   reverse: false,
 }
     
@@ -165,7 +165,7 @@ const ServicesSection = () => {
                     {/* Actual Centered Image */}
                     <img 
                       src={item.mainImg} 
-                      className="relative w-full h-full object-contain group-hover:scale-105 transition-transform duration-1000" 
+                      className="relative w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" 
                       alt={item.title} 
                     />
                   </div>
@@ -181,7 +181,7 @@ const ServicesSection = () => {
                         />
                         <img 
                           src={img} 
-                          className="relative w-full h-full object-contain" 
+                          className="relative w-full h-full object-cover" 
                           alt="Detail" 
                         />
                       </div>
