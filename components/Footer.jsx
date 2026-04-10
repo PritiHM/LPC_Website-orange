@@ -78,6 +78,11 @@ export default function Footer() {
                 Other Services
               </Link>
             </li>
+            <li>
+              <Link href="/FacilityManagement" className="hover:text-orange-400 transition">
+                Data Cleaning Services
+              </Link>
+            </li>
 
           </ul>
         </div>
