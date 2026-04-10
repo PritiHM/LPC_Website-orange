@@ -27,7 +27,7 @@ const ProjectSection = () => {
                 { title: "Commercial Pest Control", image: "/images/commercial-3.png" },
                     { title: "Commercial Deep Cleaning", image: "/images/project1.png" },
     { title: "Commercial Hospitality Service", image: "/images/project2.png" },
-    { title: "Commercial Pest Control", image: "/images/commercial-1.png" },
+    { title: "Industrial Pest Control", image: "/images/industrial-61.jpg" },
     { title: "Commercial Pest Control", image: "/images/commercial-2.png" },
         { title: "Commercial Sanitization", image: "/images/Corporate 1.png" },
             { title: "Commercial Pest Control", image: "/images/commercial-3.png" },
@@ -36,8 +36,7 @@ const ProjectSection = () => {
     { title: "Industrial Drainage Treatment", image: "/images/industrial-1.png" },
     { title: "Industrial Maintenance", image: "/images/industrial-3.png" },
         { title: "Commercial Pest Control", image: "/images/commercial-4.png" },
-    { title: "Industrial Pest Control", image: "/images/industrial-6.png" },
-        { title: "Industrial Pest Control", image: "/images/industrial-6.png" },
+    { title: "Commercial Pest Control", image: "/images/commercial-1.png" },
     { title: "Industrial Pest Control", image: "/images/industrial-5.png" },
         { title: "Industrial Deep Cleaning", image: "/images/industrial-2.png" },
 
