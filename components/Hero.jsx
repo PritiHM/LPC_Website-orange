@@ -85,10 +85,11 @@ const Hero = () => {
   ];
 
   const testimonials = [
-    { name: "John Doe", role: "CEO, Tech Corp", text: "The level of professionalism...", initials: "JD" },
-    { name: "Amit Sharma", role: "Director, InfraBuild", text: "Highly reliable...", initials: "AS" },
-    { name: "Priya Mehta", role: "Manager, CleanCo", text: "Exceptional service...", initials: "PM" }
-  ];
+  { name: "John Doe", role: "CEO, Tech Corp", text: "The level of professionalism...", initials: "JD" },
+  { name: "Amit Sharma", role: "Director, InfraBuild", text: "Highly reliable...", initials: "AS" },
+  { name: "Priya Mehta", role: "Manager, CleanCo", text: "Exceptional service...", initials: "PM" },
+  { name: "Pankaj Deole", role: "Director, ReetTech", text: "Outstanding facility management services with great attention to detail and professionalism.", initials: "PD" }
+];
 
   // --- STATE & EFFECTS ---
   const [index, setIndex] = useState(0);

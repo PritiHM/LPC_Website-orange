@@ -37,7 +37,7 @@ export default function Navbar() {
         
         {/* LOGO */}
         <Image
-          src="/images/LPC_FACILITY_SERVICES_PVT._LTD._LOGO_page-0001-removebg-preview.png"
+          src="/logo.png"
           alt="LPC Services Logo"
           width={90}
           height={35}

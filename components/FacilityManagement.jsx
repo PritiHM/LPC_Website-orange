@@ -156,21 +156,21 @@ const FacilityManagement = () => {
         </div>
       </div>
 
-      {/* POPUP MODAL - RESTRUCTURED */}
+      {/* POPUP MODAL - FIXED FOR MOBILE */}
       {selectedService && (
         <div
-          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/85 backdrop-blur-md p-6"
+          className="fixed inset-0 z-[9999] flex items-start md:items-center justify-center bg-black/85 backdrop-blur-md p-6 overflow-y-auto"
           onClick={(e) => e.target === e.currentTarget && setSelectedService(null)}
         >
           <div
-            className="relative bg-white/20 backdrop-blur-[50px] border border-white/40 rounded-[3rem] max-w-5xl w-full p-8 md:p-10 overflow-hidden max-h-[85vh]
+            className="relative bg-white/20 backdrop-blur-[50px] border border-white/40 rounded-[3rem] max-w-5xl w-full p-6 md:p-10 max-h-[90vh] overflow-y-auto
                        shadow-[0_40px_100px_rgba(255,255,255,0.15)] 
                        before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/30 before:via-transparent before:to-transparent before:opacity-70 before:rounded-[inherit] before:pointer-events-none"
             onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={() => setSelectedService(null)}
-              className="absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-orange-500 border border-white/20 transition-all duration-300 shadow-xl z-50"
+              className="absolute top-4 right-4 md:top-6 md:right-6 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-orange-500 border border-white/20 transition-all duration-300 shadow-xl z-50"
             >
               ✕
             </button>
@@ -224,7 +224,7 @@ const FacilityManagement = () => {
                   rel="noopener noreferrer"
                   className="inline-block mt-6 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg"
                 >
-                   WhatsApp Us
+                    WhatsApp Us
                 </a>
               </div>
             </div>
