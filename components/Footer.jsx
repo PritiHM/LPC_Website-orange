@@ -80,7 +80,7 @@ export default function Footer() {
             </li>
             <li>
               <Link href="/FacilityManagement" className="hover:text-orange-400 transition">
-                Data Cleaning Services
+                Data Center Cleaning Services
               </Link>
             </li>
 
