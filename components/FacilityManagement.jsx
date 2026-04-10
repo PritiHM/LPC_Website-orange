@@ -61,7 +61,18 @@ const FacilityManagement = () => {
       description: "High-pressure cleaning for tough dirt and surfaces.",
       process: ["💨 Pressure wash", "🧽 Deep scrub", "💧 Final rinse"],
       images: ["/images/jet-1.jpg", "/images/jet-2.jpg"]
-    }
+    },
+    {
+  name: "🖥️ Data Center Cleaning Services",
+  description: "Ensure maximum performance and reliability of your IT infrastructure with our specialized data center cleaning services. We provide deep cleaning for racks, cables, wiring systems, and critical hardware components.",
+  process: [
+    "🔍 Precision inspection",
+    "🧹 Dust & contamination removal",
+    "💻 Component-level cleaning",
+    "🌬️ Airflow optimization"
+  ],
+  images: ["/images/datacenter-1.png", "/images/datacenter-2.png","/images/datacenter-3.png"]
+}
   ];
 
   return (
