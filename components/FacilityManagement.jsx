@@ -27,7 +27,7 @@ const FacilityManagement = () => {
       description: "Restoring the natural luster of your stone surfaces with precision equipment and care.",
       process: ["💎 Diamond pad polishing", "🛡️ Surface sealing", "✨ High-gloss buffing"],
       image: "/images/marbel polishing.avif",
-      images: ["/images/marbel-polishing.jpg", "public/images/marbel-polishing.avif"]
+      images: ["/images/marbel-polishing.jpg", "/images/marble-polishing.jpg"]
     }
   ];
 

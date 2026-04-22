@@ -1,6 +1,7 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { Award, CheckCircle, ZoomIn, X } from "lucide-react";
 
 const About = () => {
   const leadership = {
@@ -29,6 +30,42 @@ const About = () => {
       },
     ],
   };
+  const certifications = [
+  {
+    id: 1,
+    title: "ISO 9001:2015",
+    subtitle: "Quality Management Systems",
+    image: "/images/iso-9001.png", // Update with your actual image path
+  },
+  {
+    id: 2,
+    title: "ISO 14001:2015",
+    subtitle: "Environmental Management Systems",
+    image: "/images/iso-14001.png",
+  },
+  {
+    id: 3,
+    title: "ISO 45001:2018",
+    subtitle: "Occupational Health & Safety",
+    image: "/images/iso-45001.png",
+  },
+  {
+    id: 4,
+    title: "ISO 14644-2:2015",
+    subtitle: "Cleanrooms & Controlled Environments",
+    image: "/images/iso-14644.png",
+  },
+];
+  const [selectedImg, setSelectedImg] = useState(null);
+
+  // Close modal on ESC key
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === "Escape") setSelectedImg(null);
+    };
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+}, []);
 
   return (
     <main className="pt-20 min-h-screen bg-gradient-to-br from-[#1a120b] via-[#2b1d0e] to-[#5a3e1b] text-white overflow-hidden">
@@ -108,7 +145,123 @@ const About = () => {
           </div>
         </div>
       </section>
-<section className="py-24 px-6 lg:px-24 relative overflow-hidden">
+      {/*iso-certificate*/}
+<section className="relative py-24 px-6 lg:px-24 overflow-hidden bg-transparent">
+      {/* BACKGROUND GLOWS */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#ff9f1c]/5 blur-[120px] rounded-full animate-pulse" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#5a3e1b]/20 blur-[120px] rounded-full" />
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
+        {/* HEADER */}
+        <div className="flex flex-col items-center mb-16 text-center">
+          <div className="flex items-center gap-2 mb-4">
+            <span className="h-px w-8 bg-[#ff9f1c]"></span>
+            <span className="text-[#ff9f1c] text-xs font-bold uppercase tracking-[0.3em]">
+              Global Standards
+            </span>
+            <span className="h-px w-8 bg-[#ff9f1c]"></span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Our Certifications
+          </h2>
+          <p className="max-w-2xl text-gray-400 leading-relaxed">
+            LPC Facility Services is committed to international excellence. 
+            Our operations are audited and certified to meet the highest global 
+            benchmarks.
+          </p>
+        </div>
+
+        {/* GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {certifications.map((cert) => (
+            <div
+              key={cert.id}
+              className="group relative h-[450px] w-full rounded-[2rem] transition-transform duration-500 hover:scale-[1.03]"
+            >
+              {/* CARD BODY */}
+              <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden shadow-2xl transition-all duration-500 group-hover:border-[#ff9f1c]/40 group-hover:shadow-[#ff9f1c]/10">
+                
+                {/* BADGE */}
+                <div className="absolute top-5 right-5 z-20">
+                  <div className="flex items-center gap-1.5 bg-[#ff9f1c] text-[#1a120b] px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-tighter shadow-[0_0_15px_rgba(255,159,28,0.4)]">
+                    <CheckCircle size={12} strokeWidth={3} />
+                    Certified
+                  </div>
+                </div>
+
+                {/* IMAGE PREVIEW */}
+                <div className="h-2/3 w-full p-4 overflow-hidden">
+                  <div className="relative h-full w-full rounded-xl overflow-hidden bg-black/40">
+                    <img
+                      src={cert.image}
+                      alt={cert.title}
+                      className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700"
+                    />
+                    {/* HOVER OVERLAY */}
+                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center backdrop-blur-[2px]">
+                       <button 
+                        onClick={() => setSelectedImg(cert.image)}
+                        className="flex items-center gap-2 bg-[#ff9f1c] text-[#1a120b] px-5 py-2.5 rounded-xl text-sm font-bold transition-all transform translate-y-4 group-hover:translate-y-0 hover:bg-white hover:scale-105 active:scale-95"
+                       >
+                         <ZoomIn size={18} /> View Certificate
+                       </button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* TEXT */}
+                <div className="p-6 pt-2">
+                  <h3 className="text-[#ff9f1c] text-xl font-bold mb-1">
+                    {cert.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm leading-tight font-medium">
+                    {cert.subtitle}
+                  </p>
+                  <div className="mt-4 w-12 h-1 bg-[#ff9f1c]/30 rounded-full group-hover:w-full transition-all duration-700" />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+       
+      </div>
+
+      {/* FULLSCREEN MODAL */}
+      {selectedImg && (
+        <div 
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-10 animate-in fade-in duration-300"
+          onClick={() => setSelectedImg(null)}
+        >
+          {/* Backdrop */}
+          <div className="absolute inset-0 bg-black/90 backdrop-blur-md" />
+          
+          {/* Modal Content */}
+          <div 
+            className="relative max-w-5xl w-full max-h-full z-10 flex flex-col items-center animate-in zoom-in-95 duration-300"
+            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking image
+          >
+            <button 
+              onClick={() => setSelectedImg(null)}
+              className="absolute -top-12 right-0 md:-right-12 text-white hover:text-[#ff9f1c] transition-colors p-2"
+            >
+              <X size={32} />
+            </button>
+            
+            <img 
+              src={selectedImg} 
+              alt="Certificate Full View" 
+              className="w-full h-auto max-h-[85vh] object-contain rounded-lg shadow-2xl border border-white/10"
+            />
+            
+            <p className="mt-6 text-gray-400 text-sm italic">Press ESC or click outside to close</p>
+          </div>
+        </div>
+      )}
+    </section>
+<section className="py-18 px-6 lg:px-24 relative overflow-hidden">
   <div className="max-w-7xl mx-auto">
     
     {/* Section Header */}
