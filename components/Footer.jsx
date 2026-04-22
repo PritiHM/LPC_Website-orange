@@ -95,9 +95,26 @@ export default function Footer() {
               📍 2/3, Sadguru Krupa CHS, Dharamveer Nagar, Atali Road,  
               Ambivli West, Kalyan, Thane, Maharashtra - 421102
             </li>
-            <li>📞 +91 7506102007</li>
-            <li>📞 +91 9969504730</li>
-            <li>✉️ lpcfacility1121@gmail.com</li>
+           <li>
+  📞 
+  <a href="tel:+917506102007" className="hover:text-[#ff9f1c] transition">
+    +91 7506102007
+  </a>
+</li>
+
+<li>
+  📞 
+  <a href="tel:+919969504730" className="hover:text-[#ff9f1c] transition">
+    +91 9969504730
+  </a>
+</li>
+
+<li>
+  ✉️ 
+  <a href="mailto:info@lpcfacility.in" className="hover:text-[#ff9f1c] transition">
+    info@lpcfacility.in
+  </a>
+</li>
           </ul>
         </div>
 
