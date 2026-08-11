@@ -160,19 +160,31 @@ const ContactSection = () => {
         </div>
       </div>
 
-      {/* Email Section */}
-      <div className="flex items-center gap-5">
-        <div className="h-12 w-12 flex items-center justify-center rounded-2xl bg-orange-400/30 text-orange-400">✉️</div>
-        <div>
-          <p className="text-xs text-orange-400">Email</p>
-          <a 
-            href="mailto:info@lpcfacility.in" 
-            className="text-white transition-colors duration-300 hover:text-[#ff9f1c]"
-          >
-            info@lpcfacility.in
-          </a>
-        </div>
-      </div>
+    {/* Email Section */}
+<div className="flex items-center gap-5">
+  <div className="h-12 w-12 flex items-center justify-center rounded-2xl bg-orange-400/30 text-orange-400">✉️</div>
+  
+  <div>
+    <p className="text-xs text-orange-400">Email</p>
+
+    <div className="flex flex-col">
+      <a 
+        href="mailto:info@lpcfacility.in" 
+        className="text-white transition-colors duration-300 hover:text-[#ff9f1c]"
+      >
+        info@lpcfacility.in
+      </a>
+
+      <a 
+        href="mailto:lpcfacility1121@gmail.com" 
+        className="text-white transition-colors duration-300 hover:text-[#ff9f1c]"
+      >
+        lpcfacility1121@gmail.com
+      </a>
+    </div>
+
+  </div>
+</div>
 
       {/* Address Section */}
       <div className="flex items-start gap-5">

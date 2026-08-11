@@ -115,15 +115,34 @@ export default function Footer() {
     info@lpcfacility.in
   </a>
 </li>
+<li>
+  ✉️ 
+  <a href="mailto:lpcfacility1121@gmail.com" className="hover:text-[#ff9f1c] transition">
+     lpcfacility1121@gmail.com  </a>
+</li>
           </ul>
         </div>
 
       </div>
 
-      {/* BOTTOM */}
-      <div className="border-t border-orange-800 mt-10 pt-4 text-center text-orange-300 text-sm">
-        © {new Date().getFullYear()} LPC Facility Services Pvt. Ltd. All rights reserved.
-      </div>
+     {/* BOTTOM */}
+<div className="border-t border-orange-800 mt-10 pt-4 text-center text-orange-300 text-sm">
+  <p>
+    © {new Date().getFullYear()} LPC Facility Services Pvt. Ltd. All rights reserved.
+  </p>
+
+  <p className="mt-2">
+    Designed & Developed by{" "}
+    <a
+      href="https://www.reettechit.com/en"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-orange-400 font-semibold hover:text-orange-200 transition"
+    >
+      Reet Technologies
+    </a>
+  </p>
+</div>
 
     </footer>
   );
